@@ -9914,7 +9914,7 @@
 	
 	
 	// module
-	exports.push([module.id, "body,\nhtml {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\nbody,\ninput {\n  font-size: 36px;\n  font-family: 'Helvetica Neue';\n  font-weight: 200;\n  color: #676262;\n  background-color: #DDDDDD;\n}\n.center-container {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  top: 0;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.center-container > div {\n  display: -webkit-inline-box;\n  display: -webkit-inline-flex;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n}\n.center-container .prefix-input-field {\n  width: 60vw;\n}\n.map {\n  width: 100%;\n  height: 100%;\n}\n", ""]);
+	exports.push([module.id, "body,\nhtml {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\nhtml {\n  font-size: 1vw;\n}\n.center-container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n", ""]);
 	
 	// exports
 
@@ -10239,19 +10239,13 @@
 	
 	exports.__esModule = true;
 	
-	var _prefix_input_fieldVue = __webpack_require__(15);
+	var _coffee_catVue = __webpack_require__(22);
 	
-	var _prefix_input_fieldVue2 = _interopRequireDefault(_prefix_input_fieldVue);
+	var _coffee_catVue2 = _interopRequireDefault(_coffee_catVue);
 	
 	exports["default"] = {
-	    data: function data() {
-	        return {
-	            location: null
-	        };
-	    },
-	
 	    components: {
-	        PrefixInputField: _prefix_input_fieldVue2["default"]
+	        CoffeeCat: _coffee_catVue2["default"]
 	    }
 	};
 	module.exports = exports["default"];
@@ -10271,35 +10265,47 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 15 */
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */
+/***/ function(module, exports) {
+
+	module.exports = "<body><div class=\"center-container\"><coffee-cat></coffee-cat></div></body>";
+
+/***/ },
+/* 21 */,
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(16)
-	module.exports = __webpack_require__(18)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(19)
+	__webpack_require__(23)
+	module.exports = __webpack_require__(25)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(26)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
 	hotAPI.install(require("vue"))
 	if (!hotAPI.compatible) return
-	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./prefix_input_field.vue"
+	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./coffee_cat.vue"
 	hotAPI.createRecord(id, module.exports)
-	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./prefix_input_field.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./prefix_input_field.vue"], function () {
-	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./prefix_input_field.vue")
-	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./prefix_input_field.vue")
+	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./coffee_cat.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./coffee_cat.vue"], function () {
+	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./coffee_cat.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./coffee_cat.vue")
 	hotAPI.update(id, newOptions, newTemplate)
 	})
 	})()
 	}
 
 /***/ },
-/* 16 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(17);
+	var content = __webpack_require__(24);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(12)(content, {});
@@ -10308,8 +10314,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ca011ac&file=prefix_input_field.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./prefix_input_field.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ca011ac&file=prefix_input_field.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./prefix_input_field.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e84ed212&file=coffee_cat.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./coffee_cat.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e84ed212&file=coffee_cat.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./coffee_cat.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10319,7 +10325,7 @@
 	}
 
 /***/ },
-/* 17 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(11)();
@@ -10327,44 +10333,26 @@
 	
 	
 	// module
-	exports.push([module.id, ".prefix-input-field {\n  background-color: #FFFAF0;\n  border-radius: 0.3em;\n  padding: 0.3em 0.5em;\n  border: 0.125em solid #FFAEAE;\n  box-sizing: border-box;\n  white-space: nowrap;\n  width: 100%;\n  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);\n}\n.prefix-input-field .prefix-input-field-prefix {\n  display: inline-block;\n}\n.prefix-input-field .prefix-input-field-prefix:after {\n  display: inline-block;\n  content: \" \";\n}\n.prefix-input-field .prefix-input-field-span {\n  -webkit-box-flex: 100;\n  -webkit-flex-grow: 100;\n      -ms-flex-positive: 100;\n          flex-grow: 100;\n}\n.prefix-input-field .prefix-input-field-span input {\n  background-color: transparent;\n  border: none;\n  outline: none;\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, ".coffee-cat {\n  width: 60em;\n  height: 20em;\n}\n.coffee-cat .head {\n  width: 100%;\n  height: 80%;\n  box-sizing: border-box;\n  border-top-left-radius: 6em;\n  border-top-right-radius: 6em;\n  border-top: 0.6em solid #F19C79;\n  border-left: 0.6em solid #F19C79;\n  border-right: 0.6em solid #F19C79;\n  background-color: #F6F4D2;\n}\n.coffee-cat .cheeks {\n  width: 100%;\n  height: 20%;\n}\n.coffee-cat .cheeks .cheek {\n  width: 50%;\n  height: 100%;\n  display: inline-block;\n  box-sizing: border-box;\n  border-bottom-left-radius: 6em;\n  border-bottom-right-radius: 6em;\n  border-bottom: 0.6em solid #F19C79;\n  border-left: 0.6em solid #F19C79;\n  border-right: 0.6em solid #F19C79;\n  background-color: #F6F4D2;\n}\n.coffee-cat .nose {\n  width: 0;\n  height: 0;\n  margin: 0 auto;\n  position: relative;\n  top: 10em;\n  border-left: 5em solid transparent;\n  border-right: 5em solid transparent;\n  border-top: 6.25em solid #F19C79;\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 18 */
+/* 25 */
 /***/ function(module, exports) {
 
 	"use strict";
 	
 	exports.__esModule = true;
-	exports["default"] = {
-	    props: ["prefix", "focus", "val"],
-	
-	    ready: function ready() {
-	        if (this.focus) this.focusInput();
-	    },
-	
-	    methods: {
-	        focusInput: function focusInput() {
-	            this.$els.input.focus();
-	        }
-	    }
-	};
+	exports["default"] = {};
 	module.exports = exports["default"];
 
 /***/ },
-/* 19 */
+/* 26 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-on:click=\"focusInput\" class=\"prefix-input-field\"><div class=\"prefix-input-field-prefix\">{{prefix}}</div><span class=\"prefix-input-field-span\"><input v-model=\"val\" v-el:input=\"v-el:input\" debounce=\"500\" type=\"text\" placeholder=\"...\"/></span></div>";
-
-/***/ },
-/* 20 */
-/***/ function(module, exports) {
-
-	module.exports = "<body><div class=\"center-container\"></div><div class=\"center-container\"><prefix-input-field :val.sync=\"location\" prefix=\"I'm traveling to \" focus=\"focus\"></prefix-input-field></div></body>";
+	module.exports = "<div class=\"coffee-cat\"><div class=\"head\"><div class=\"nose\"></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div></div>";
 
 /***/ }
 /******/ ]);
