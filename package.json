@@ -1,0 +1,35 @@
+{
+  "name": "bring-your-sweater",
+  "description": "What clothes to bring when travelling.",
+  "author": "Shay Davidson <shay.h.davidson@gmail.com>",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rot-13/bring-your-sweater"
+  },
+  "bugs": {
+    "url": "https://github.com/rot-13/bring-your-sweater/issues"
+  },
+  "dependencies": {
+    "vue": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.29",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^5.8.29",
+    "css-loader": "^0.21.0",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.7.1",
+    "json-loader": "^0.5.3",
+    "less": "^2.5.3",
+    "less-loader": "^2.2.1",
+    "node-sass": "^3.4.1",
+    "style-loader": "^0.13.0",
+    "template-html-loader": "0.0.3",
+    "vue-hot-reload-api": "^1.2.1",
+    "vue-html-loader": "^1.0.0",
+    "vue-loader": "^6.0.0",
+    "webpack": "^1.12.2"
+  }
+}
