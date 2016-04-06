@@ -9,7 +9,7 @@
 
 <style lang="less">
     .coffee-cat {
-        @base-rem: 60em;
+        @base-rem: 60rem;
         @border-radius: @base-rem / 10;
         @border-width: @base-rem / 100;
         @border-color: #F19C79;
@@ -21,6 +21,7 @@
         height: @base-rem / 3;
 
         .head {
+            position: relative;
             width: 100%;
             height: @head-base-height;
             box-sizing: border-box;
@@ -30,6 +31,18 @@
             border-left: @border-width solid @border-color;
             border-right: @border-width solid @border-color;
             background-color: @skin-color;
+
+            .nose {
+            	width: 0;
+            	height: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                bottom: @base-rem / -60;
+            	border-left: @nose-width solid transparent;
+            	border-right: @nose-width solid transparent;
+            	border-top: @nose-width * 1.25 solid @border-color;
+            }
         }
 
         .cheeks {
@@ -48,17 +61,6 @@
                 border-right: @border-width solid @border-color;
                 background-color: @skin-color;
             }
-        }
-
-        .nose {
-        	width: 0;
-        	height: 0;
-            margin: 0 auto;
-            position: relative;
-            top: @nose-width * 2;
-        	border-left: @nose-width solid transparent;
-        	border-right: @nose-width solid transparent;
-        	border-top: @nose-width * 1.25 solid @border-color;
         }
     }
 </style>
