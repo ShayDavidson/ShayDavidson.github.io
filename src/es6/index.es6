@@ -1,11 +1,11 @@
 let Vue = require('vue')
 let App = require('app.vue')
 
-Vue.config.debug = true;
+Vue.config.debug = true
 
-new Vue({
-  el: 'html',
-  components: {
-    app: App
-  }
-});
+Vue({
+	el: 'html',
+	components: {
+		app: App
+	}
+})

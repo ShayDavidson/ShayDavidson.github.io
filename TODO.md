@@ -1,14 +1,14 @@
 ### Awesomeness
 
 - [ ] History.
-- [ ] Instafeed.
+- [ ] Insta-feed.
 - [ ] Games.
 
 ### Contact me
 
 - [ ] PayPal.Me.
 - [ ] Twitter.
-- [ ] Linkedin.
+- [ ] LinkedIn.
 
 ### Analytics
 
