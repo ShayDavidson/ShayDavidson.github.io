@@ -37,6 +37,5 @@ module.exports = {
     resolve: {
 		modulesDirectories: [".", "src/config", "src/es6", "src/less", "src/vue", "node_modules"],
 		extensions: ["", ".es6", ".js", ".less", ".vue", ".json"]
-	},
-    devtool: "source-map"
+	}
 };
