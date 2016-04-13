@@ -1,6 +1,6 @@
 <template lang="jade">
     body
-        .center-container
+        .center-container(style="width: 50%")
             coffee-cat
 </template>
 
@@ -12,7 +12,7 @@
     }
 
     .center-container {
-        width: 100%;
+		margin: 0 auto;
         height: 100%;
         display: flex;
         align-items: center;

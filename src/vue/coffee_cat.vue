@@ -5,6 +5,9 @@
         .cheeks
             .cheek
             .cheek
+        .ears
+            .ear
+            .ear
 </template>
 
 <style lang="less">

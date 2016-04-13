@@ -9912,7 +9912,7 @@
 	
 	
 	// module
-	exports.push([module.id, "body,\nhtml {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\nhtml {\n  font-size: 1vw;\n}\n.center-container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n", ""]);
+	exports.push([module.id, "body,\nhtml {\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\nhtml {\n  font-size: 1vw;\n}\n.center-container {\n  margin: 0 auto;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n", ""]);
 	
 	// exports
 
@@ -10338,13 +10338,13 @@
 /* 17 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"coffee-cat\"><div class=\"head\"><div class=\"nose\"></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div></div>";
+	module.exports = "<div class=\"coffee-cat\"><div class=\"head\"><div class=\"nose\"></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div><div class=\"ears\"><div class=\"ear\"></div><div class=\"ear\"></div></div></div>";
 
 /***/ },
 /* 18 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div class=\"center-container\"><coffee-cat></coffee-cat></div></body>";
+	module.exports = "<body><div style=\"width: 50%\" class=\"center-container\"><coffee-cat></coffee-cat></div></body>";
 
 /***/ }
 /******/ ]);
