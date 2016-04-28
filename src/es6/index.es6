@@ -3,7 +3,7 @@ let App = require('app.vue')
 
 Vue.config.debug = true
 
-Vue({
+new Vue({ // eslint-disable-line no-new
 	el: 'html',
 	components: {
 		app: App

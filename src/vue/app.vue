@@ -1,7 +1,7 @@
 <template lang="jade">
 	body
 		.center-container(style="width: 50%")
-		coffee-cat
+			coffee-cat
 </template>
 
 <style lang="less">
@@ -25,7 +25,7 @@
 
 	export default {
 		components: {
-			CoffeeCat,
+			CoffeeCat
 		}
 	}
 </script>

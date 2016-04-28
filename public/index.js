@@ -51,7 +51,7 @@
 
 	Vue.config.debug = true;
 
-	Vue({
+	new Vue({ // eslint-disable-line no-new
 		el: 'html',
 		components: {
 			app: App
@@ -10344,7 +10344,7 @@
 /* 18 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div style=\"width: 50%\" class=\"center-container\"></div><coffee-cat></coffee-cat></body>";
+	module.exports = "<body><div style=\"width: 50%\" class=\"center-container\"><coffee-cat></coffee-cat></div></body>";
 
 /***/ }
 /******/ ]);
