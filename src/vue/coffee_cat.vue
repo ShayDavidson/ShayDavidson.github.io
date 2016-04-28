@@ -29,6 +29,8 @@
 		@eye-width: @base-rem / 20;
 		@eye-padding: @base-rem / 6;
 		@eye-position: @base-rem / 10;
+		@ear-width: @base-rem / 15;
+		@ear-padding: @base-rem / 8;
 
 		width: @base-rem;
 		height: @base-rem / 3;
@@ -74,6 +76,25 @@
 						float: right;
 						margin-right: @eye-padding;
 					}
+				}
+			}
+		}
+
+		.ears {
+			position: relative;
+			top: ~'calc(-100% - @{ear-width} - @{border-width} + 1px)';
+			.ear {
+				display: inline-block;
+				.triangle-open-border(@ear-width, @border-width, @skin-color, @border-color);
+
+				&:first-child {
+					float: left;
+					margin-left: @ear-padding;
+				}
+
+				&:last-child {
+					float: right;
+					margin-right: @ear-padding;
 				}
 			}
 		}
