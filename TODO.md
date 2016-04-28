@@ -9,6 +9,9 @@
 - [ ] PayPal.Me.
 - [ ] Twitter.
 - [ ] LinkedIn.
+- [ ] Github.
+- [ ] Instagram.
+- [ ] Stackoverflow.
 
 ### Analytics
 
