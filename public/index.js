@@ -46,8 +46,8 @@
 
 	'use strict';
 
-	var Vue = __webpack_require__(3);
-	var App = __webpack_require__(5);
+	var Vue = __webpack_require__(5);
+	var App = __webpack_require__(7);
 
 	Vue.config.debug = true;
 
@@ -61,7 +61,9 @@
 /***/ },
 /* 1 */,
 /* 2 */,
-/* 3 */
+/* 3 */,
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -9755,10 +9757,10 @@
 	}
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(4)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(6)))
 
 /***/ },
-/* 4 */
+/* 6 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -9855,12 +9857,12 @@
 
 
 /***/ },
-/* 5 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(6)
-	module.exports = __webpack_require__(10)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(17)
+	__webpack_require__(8)
+	module.exports = __webpack_require__(12)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(19)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -9877,16 +9879,16 @@
 	}
 
 /***/ },
-/* 6 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(7);
+	var content = __webpack_require__(9);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -9903,10 +9905,10 @@
 	}
 
 /***/ },
-/* 7 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(8)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
@@ -9917,7 +9919,7 @@
 
 
 /***/ },
-/* 8 */
+/* 10 */
 /***/ function(module, exports) {
 
 	/*
@@ -9973,7 +9975,7 @@
 
 
 /***/ },
-/* 9 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10227,16 +10229,16 @@
 
 
 /***/ },
-/* 10 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
-	var _interopRequireDefault = __webpack_require__(11)["default"];
+	var _interopRequireDefault = __webpack_require__(13)["default"];
 
 	exports.__esModule = true;
 
-	var _coffee_catVue = __webpack_require__(12);
+	var _coffee_catVue = __webpack_require__(14);
 
 	var _coffee_catVue2 = _interopRequireDefault(_coffee_catVue);
 
@@ -10248,7 +10250,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 11 */
+/* 13 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10262,12 +10264,12 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 12 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(13)
-	module.exports = __webpack_require__(15)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(16)
+	__webpack_require__(15)
+	module.exports = __webpack_require__(17)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(18)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10284,16 +10286,16 @@
 	}
 
 /***/ },
-/* 13 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(14);
+	var content = __webpack_require__(16);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10310,21 +10312,21 @@
 	}
 
 /***/ },
-/* 14 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(8)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".coffee-cat {\n  width: 60rem;\n  height: 20rem;\n}\n.coffee-cat .head {\n  position: relative;\n  width: 100%;\n  height: 80%;\n  box-sizing: border-box;\n  border-top-left-radius: 6rem;\n  border-top-right-radius: 6rem;\n  border-top: 0.6rem solid #F19C79;\n  border-left: 0.6rem solid #F19C79;\n  border-right: 0.6rem solid #F19C79;\n  background-color: #F6F4D2;\n}\n.coffee-cat .head .nose {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  bottom: -1rem;\n  border-top: 6.25rem solid #F19C79;\n  border-left: 5rem solid transparent;\n  border-right: 5rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  width: 100%;\n  top: 6rem;\n}\n.coffee-cat .head .eyes .eye {\n  display: inline-block;\n  border-bottom: 3.75rem solid #3C3C3C;\n  border-left: 3rem solid transparent;\n  border-right: 3rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes .eye:after {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 3.15rem solid #F6F4D2;\n  border-left: 2.52rem solid transparent;\n  border-right: 2.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes .eye:first-child {\n  float: left;\n  margin-left: 10rem;\n}\n.coffee-cat .head .eyes .eye:last-child {\n  float: right;\n  margin-right: 10rem;\n}\n.coffee-cat .ears {\n  position: relative;\n  top: calc(-100% - 4rem - 0.6rem + 1px);\n}\n.coffee-cat .ears .ear {\n  display: inline-block;\n  border-bottom: 5rem solid #F19C79;\n  border-left: 4rem solid transparent;\n  border-right: 4rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .ears .ear:after {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 4.4rem solid #F6F4D2;\n  border-left: 3.52rem solid transparent;\n  border-right: 3.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .ears .ear:first-child {\n  float: left;\n  margin-left: 7.5rem;\n}\n.coffee-cat .ears .ear:last-child {\n  float: right;\n  margin-right: 7.5rem;\n}\n.coffee-cat .cheeks {\n  width: 100%;\n  height: 20%;\n}\n.coffee-cat .cheeks .cheek {\n  width: 50%;\n  height: 100%;\n  display: inline-block;\n  box-sizing: border-box;\n  border-bottom-left-radius: 6rem;\n  border-bottom-right-radius: 6rem;\n  border-bottom: 0.6rem solid #F19C79;\n  border-left: 0.6rem solid #F19C79;\n  border-right: 0.6rem solid #F19C79;\n  background-color: #F6F4D2;\n}\n", ""]);
+	exports.push([module.id, ".coffee-cat {\n  width: 60rem;\n  height: 20rem;\n}\n.coffee-cat .head {\n  position: relative;\n  width: 100%;\n  height: 80%;\n  box-sizing: border-box;\n  border-top-left-radius: 6rem;\n  border-top-right-radius: 6rem;\n  border-top: 0.6rem solid #F19C79;\n  border-left: 0.6rem solid #F19C79;\n  border-right: 0.6rem solid #F19C79;\n  background-color: #F6F4D2;\n}\n.coffee-cat .head .nose {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  bottom: -0.8rem;\n  border-top: 6.25rem solid #F19C79;\n  border-left: 5rem solid transparent;\n  border-right: 5rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  width: 100%;\n  top: 6rem;\n}\n.coffee-cat .head .eyes .eye {\n  display: inline-block;\n  border-bottom: 3.75rem solid #3C3C3C;\n  border-left: 3rem solid transparent;\n  border-right: 3rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes .eye:before {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 3.15rem solid #F6F4D2;\n  border-left: 2.52rem solid transparent;\n  border-right: 2.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes .eye:first-child {\n  float: left;\n  margin-left: 10rem;\n}\n.coffee-cat .head .eyes .eye:last-child {\n  float: right;\n  margin-right: 10rem;\n}\n.coffee-cat .ears {\n  position: relative;\n  top: calc(-100% - 4rem - 0.6rem + 1px);\n}\n.coffee-cat .ears .ear {\n  display: inline-block;\n  border-bottom: 5rem solid #F19C79;\n  border-left: 4rem solid transparent;\n  border-right: 4rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .ears .ear:before {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 4.4rem solid #F6F4D2;\n  border-left: 3.52rem solid transparent;\n  border-right: 3.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .ears .ear:first-child {\n  float: left;\n  margin-left: 7.5rem;\n}\n.coffee-cat .ears .ear:last-child {\n  float: right;\n  margin-right: 7.5rem;\n}\n.coffee-cat .ears .ear .inner-ear {\n  position: absolute;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  top: calc(4rem - 2rem + 0.6rem);\n  border-bottom: 2.5rem solid #F19C79;\n  border-left: 2rem solid transparent;\n  border-right: 2rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .ears .ear .inner-ear:before {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 1.9rem solid #F6F4D2;\n  border-left: 1.52rem solid transparent;\n  border-right: 1.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .cheeks {\n  width: 100%;\n  height: 20%;\n}\n.coffee-cat .cheeks .cheek {\n  width: 50%;\n  height: 100%;\n  display: inline-block;\n  box-sizing: border-box;\n  border-bottom-left-radius: 6rem;\n  border-bottom-right-radius: 6rem;\n  border-bottom: 0.6rem solid #F19C79;\n  border-left: 0.6rem solid #F19C79;\n  border-right: 0.6rem solid #F19C79;\n  background-color: #F6F4D2;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10334,13 +10336,13 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"coffee-cat\"><div class=\"head\"><div class=\"nose\"></div><div class=\"eyes\"><div class=\"eye\"></div><div class=\"eye\"></div></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div><div class=\"ears\"><div class=\"ear\"></div><div class=\"ear\"></div></div></div>";
+	module.exports = "<div class=\"coffee-cat\"><div class=\"head\"><div class=\"nose\"></div><div class=\"eyes\"><div class=\"eye\"></div><div class=\"eye\"></div></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div><div class=\"ears\"><div class=\"ear\"><div class=\"inner-ear\"></div></div><div class=\"ear\"><div class=\"inner-ear\"></div></div></div></div>";
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports) {
 
 	module.exports = "<body><div style=\"width: 50%\" class=\"center-container\"><coffee-cat></coffee-cat></div></body>";

@@ -10,7 +10,9 @@
 			.cheek
 		.ears
 			.ear
+				.inner-ear
 			.ear
+				.inner-ear
 </template>
 
 <style lang="less">
@@ -25,12 +27,13 @@
 		@eye-color: #3C3C3C;
 		@head-base-height: 80%;
 		@nose-width: @base-rem / 12;
-		@nose-position: @base-rem / -60;
+		@nose-position: @base-rem / -75;
 		@eye-width: @base-rem / 20;
 		@eye-padding: @base-rem / 6;
 		@eye-position: @base-rem / 10;
 		@ear-width: @base-rem / 15;
 		@ear-padding: @base-rem / 8;
+		@inner-ear-width: @base-rem / 30;
 
 		width: @base-rem;
 		height: @base-rem / 3;
@@ -83,6 +86,7 @@
 		.ears {
 			position: relative;
 			top: ~'calc(-100% - @{ear-width} - @{border-width} + 1px)';
+
 			.ear {
 				display: inline-block;
 				.triangle-open-border(@ear-width, @border-width, @skin-color, @border-color);
@@ -95,6 +99,13 @@
 				&:last-child {
 					float: right;
 					margin-right: @ear-padding;
+				}
+
+				.inner-ear {
+					position: absolute;
+					transform: translateX(-50%);
+					top: ~'calc(@{ear-width} - @{inner-ear-width} + @{border-width})';
+					.triangle-open-border(@inner-ear-width, @border-width, @skin-color, @border-color);
 				}
 			}
 		}
