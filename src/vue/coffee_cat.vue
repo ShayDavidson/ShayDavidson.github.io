@@ -11,6 +11,8 @@
 </template>
 
 <style lang="less">
+	@import '~triangles.less';
+
 	.coffee-cat {
 		@base-rem: 60rem;
 		@border-radius: @base-rem / 10;
@@ -36,15 +38,11 @@
 			background-color: @skin-color;
 
 			.nose {
-				width: 0;
-				height: 0;
 				left: 50%;
 				transform: translateX(-50%);
 				position: absolute;
 				bottom: @base-rem / -60;
-				border-left: @nose-width solid transparent;
-				border-right: @nose-width solid transparent;
-				border-top: @nose-width * 1.25 solid @border-color;
+				.triangle(@nose-width, @border-color);
 			}
 		}
 
@@ -70,6 +68,6 @@
 
 <script>
 	export default {
-		
+
 	}
 </script>
