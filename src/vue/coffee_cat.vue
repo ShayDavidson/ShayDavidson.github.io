@@ -2,6 +2,9 @@
 	.coffee-cat
 		.head
 			.nose
+			.eyes
+				.eye
+				.eye
 		.cheeks
 			.cheek
 			.cheek
@@ -19,8 +22,13 @@
 		@border-width: @base-rem / 100;
 		@border-color: #F19C79;
 		@skin-color: #F6F4D2;
+		@eye-color: #3C3C3C;
 		@head-base-height: 80%;
 		@nose-width: @base-rem / 12;
+		@nose-position: @base-rem / -60;
+		@eye-width: @base-rem / 20;
+		@eye-padding: @base-rem / 6;
+		@eye-position: @base-rem / 10;
 
 		width: @base-rem;
 		height: @base-rem / 3;
@@ -41,8 +49,32 @@
 				left: 50%;
 				transform: translateX(-50%);
 				position: absolute;
-				bottom: @base-rem / -60;
-				.triangle(@nose-width, @border-color);
+				bottom: @nose-position;
+				.triangle-flipped(@nose-width, @border-color);
+			}
+
+			.eyes {
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				position: absolute;
+				width: 100%;
+				top: @eye-position;
+
+				.eye {
+					display: inline-block;
+					.triangle-open-border(@eye-width, @border-width, @skin-color, @eye-color);
+
+					&:first-child {
+						float: left;
+						margin-left: @eye-padding;
+					}
+
+					&:last-child {
+						float: right;
+						margin-right: @eye-padding;
+					}
+				}
 			}
 		}
 

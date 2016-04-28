@@ -1,7 +1,30 @@
-.triangle(@width, @color) {
+@triangle-multiplier: 1.25;
+
+.triangle-base(@width, @color) {
 	border-left: @width solid transparent;
 	border-right: @width solid transparent;
-	border-top: @width * 1.25 solid @color;
 	height: 0px;
 	width: 0px;
+}
+
+.triangle(@width, @color) {
+	border-bottom: @width * @triangle-multiplier solid @color;
+	.triangle-base(@width, @color);
+}
+
+.triangle-flipped(@width, @color) {
+	border-top: @width * @triangle-multiplier solid @color;
+	.triangle-base(@width, @color);
+}
+
+.triangle-open-border(@width, @border-width, @color, @border-color) {
+	.triangle(@width, @border-color);
+
+	&:after {
+		content: '';
+		display: inline-block;
+		margin-top: @border-width * @triangle-multiplier;
+		transform: translateX(-50%);
+		.triangle(@width - (@border-width / @triangle-multiplier), @color);
+	}
 }
