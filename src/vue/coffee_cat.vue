@@ -23,7 +23,6 @@
 		@border-color: #F19C79;
 		@skin-color: #F6F4D2;
 		@eye-color: #3C3C3C;
-		@min-height: 20rem;
 		@border-radius: 6rem;
 		@border-width: 0.6rem;
 		@cheek-height: 5rem;
@@ -40,14 +39,13 @@
 
 		width: 100%;
 		height: 100%;
-		min-height: @min-height;
 		position: relative;
 
 		.head {
 			margin-top: -@border-width;
 			position: relative;
 			width: 100%;
-			height: @head-base-height;
+			height: ~'calc(100% - @{ear-height} - @{cheek-height} + @{border-width})';
 			box-sizing: border-box;
 			border-top-left-radius: @border-radius;
 			border-top-right-radius: @border-radius;

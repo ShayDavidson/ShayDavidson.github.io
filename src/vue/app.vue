@@ -24,6 +24,7 @@
 
 	.coffee-cat-container {
 		height: 30vh;
+		min-height: 30rem;
 		width: 50%;
 	}
 </style>
