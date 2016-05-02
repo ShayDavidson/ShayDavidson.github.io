@@ -1,5 +1,10 @@
 <template lang="jade">
 	.coffee-cat
+		.ears
+			.ear
+				.inner-ear
+			.ear
+				.inner-ear
 		.head
 			.nose
 			.eyes
@@ -8,11 +13,6 @@
 		.cheeks
 			.cheek
 			.cheek
-		.ears
-			.ear
-				.inner-ear
-			.ear
-				.inner-ear
 		//- .handle
 </template>
 
@@ -34,6 +34,7 @@
 		@eye-padding: @base-rem / 6;
 		@eye-position: @base-rem / 10;
 		@ear-width: @base-rem / 15;
+		@hear-height: @ear-width * @triangle-multiplier;
 		@ear-padding: @base-rem / 10;
 		@inner-ear-width: @base-rem / 30;
 
@@ -43,6 +44,7 @@
 		position: relative;
 
 		.head {
+			margin-top: -@border-width;
 			position: relative;
 			width: 100%;
 			height: @head-base-height;
@@ -88,11 +90,10 @@
 		}
 
 		.ears {
-			@height: @ear-width * @triangle-multiplier;
-			position: absolute;
 			width: 100%;
-			height: @height;
-			top: ~'calc(-@{height} + @{border-width})';
+			z-index: 1;
+			position: relative;
+			height: @hear-height;
 
 			.ear {
 				display: inline-block;
