@@ -172,37 +172,54 @@
 					height: 100%;
 					width: ~'calc(100% - @{handle-part-width})';
 					background-color: @skin-color;
-					display: inline-block;
+					float: left;
 					border-top: @border;
 					border-bottom: @border;
 				}
 
 				.corner-horizontal-handle {
 					box-sizing: border-box;
-					border-top-right-radius: @border-radius;
 					height: @handle-part-width;
 					width: @handle-part-width;
 					background-color: @skin-color;
-					border-right: @border;
-					border-top: @border;
 					position: relative;
-					display: inline-block;
+					float: right;
 
 					&:after {
 						content: '';
 						position: absolute;
 						left: 0;
-						bottom: 0;
 						width: @border-width;
 						height: @border-width;
 						background-color: @border-color;
 					}
 				}
 
+				&:first-child {
+					.corner-horizontal-handle {
+						border-top-right-radius: @border-radius;
+						border-right: @border;
+						border-top: @border;
+
+						&:after {
+							bottom: 0;
+						}
+					}
+				}
+
 				&:last-child {
-					transform: scaleY(-1);
 					position: absolute;
 					bottom: 0;
+
+					.corner-horizontal-handle {
+						border-bottom-right-radius: @border-radius;
+						border-right: @border;
+						border-bottom: @border;
+
+						&:after {
+							top: 0;
+						}
+					}
 				}
 			}
 		}
