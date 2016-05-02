@@ -14,15 +14,23 @@
 			.cheek
 			.cheek
 		.handle
+			.horizontal-handle
+				.flat-horizontal-handle
+				.corner-horizontal-handle
+			.vertical-handle
+			.horizontal-handle
+				.flat-horizontal-handle
+				.corner-horizontal-handle
 </template>
 
 <style lang="less">
 	@import '~triangles.less';
+	@import '~colors.less';
 
 	.coffee-cat {
-		@border-color: #F19C79;
-		@skin-color: #F6F4D2;
-		@eye-color: #A44A3F;
+		@border-color: @color-orange;
+		@skin-color: @color-yellow;
+		@eye-color: @color-red;
 		@border-radius: 6rem;
 		@border-width: 0.6rem;
 		@cheek-height: 5rem;
@@ -35,6 +43,10 @@
 		@ear-height: @ear-width * @triangle-multiplier;
 		@ear-padding: 6rem;
 		@inner-ear-width: 2rem;
+		@handle-width: 15%;
+		@handle-height: 60%;
+		@handle-part-width: 3rem;
+		@border: @border-width solid @border-color;
 
 		width: 100%;
 		height: 100%;
@@ -42,14 +54,13 @@
 
 		.head {
 			position: relative;
-			width: 100%;
 			height: ~'calc(100% - @{cheek-height})';
 			box-sizing: border-box;
 			border-top-left-radius: @border-radius;
 			border-top-right-radius: @border-radius;
-			border-top: @border-width solid @border-color;
-			border-left: @border-width solid @border-color;
-			border-right: @border-width solid @border-color;
+			border-top: @border;
+			border-left: @border;
+			border-right: @border;
 			background-color: @skin-color;
 
 			.nose {
@@ -116,7 +127,6 @@
 		}
 
 	  .cheeks {
-			width: 100%;
 			height: @cheek-height;
 
 			.cheek {
@@ -126,21 +136,48 @@
 				box-sizing: border-box;
 				border-bottom-left-radius: @border-radius;
 				border-bottom-right-radius: @border-radius;
-				border-bottom: @border-width solid @border-color;
-				border-left: @border-width solid @border-color;
-				border-right: @border-width solid @border-color;
+				border-bottom: @border;
+				border-left: @border;
+				border-right: @border;
 				background-color: @skin-color;
 			}
 		}
 
 		.handle {
 			position: absolute;
-			height: 50%;
-			width: 20%;
-			box-sizing: border-box;
-			background-color: @skin-color;
-			border-radius: @border-radius;
-			border: @border-width solid @border-color;
+			height: @handle-height;
+			width: @handle-width;
+			top: 50%;
+			transform: translateY(-50%);
+			right: ~'calc(-@{handle-width} + @{border-width})';
+
+			.vertical-handle {
+				box-sizing: border-box;
+				background-color: @skin-color;
+				height: ~'calc(100% - 2 * @{handle-part-width})';
+				position: absolute;
+				border-left: @border;
+				border-right: @border;
+				right: 0;
+				width: @handle-part-width;
+			}
+
+			.horizontal-handle {
+				box-sizing: border-box;
+				border-top-right-radius: @border-radius;
+				background-color: @skin-color;
+				width: 100%;
+				height: @handle-part-width;
+				border-top: @border;
+				border-bottom: @border;
+				border-right: @border;
+
+				&:last-child {
+					transform: scaleY(-1);
+					position: absolute;
+					bottom: 0;
+				}
+			}
 		}
 	}
 </style>

@@ -7,6 +7,7 @@
 
 <style lang="less">
 	@import "~reset.less";
+	@import '~colors.less';
 
 	html, body {
 		width: 100%;
@@ -15,7 +16,7 @@
 	}
 
 	body {
-		background-color: #CBDFBD;
+		background-color: @color-dry;
 	}
 
 	.container {
