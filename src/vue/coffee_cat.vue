@@ -164,13 +164,40 @@
 
 			.horizontal-handle {
 				box-sizing: border-box;
-				border-top-right-radius: @border-radius;
-				background-color: @skin-color;
 				width: 100%;
 				height: @handle-part-width;
-				border-top: @border;
-				border-bottom: @border;
-				border-right: @border;
+
+				.flat-horizontal-handle {
+					box-sizing: border-box;
+					height: 100%;
+					width: ~'calc(100% - @{handle-part-width})';
+					background-color: @skin-color;
+					display: inline-block;
+					border-top: @border;
+					border-bottom: @border;
+				}
+
+				.corner-horizontal-handle {
+					box-sizing: border-box;
+					border-top-right-radius: @border-radius;
+					height: @handle-part-width;
+					width: @handle-part-width;
+					background-color: @skin-color;
+					border-right: @border;
+					border-top: @border;
+					position: relative;
+					display: inline-block;
+
+					&:after {
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						width: @border-width;
+						height: @border-width;
+						background-color: @border-color;
+					}
+				}
 
 				&:last-child {
 					transform: scaleY(-1);
