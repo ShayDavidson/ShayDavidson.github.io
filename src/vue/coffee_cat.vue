@@ -45,7 +45,7 @@
 		@eye-position: 7rem;
 		@ear-width: 4rem;
 		@ear-height: @ear-width * @triangle-multiplier;
-		@ear-padding: 3rem;
+		@ear-padding: 2rem;
 		@handle-position: 4rem;
 		@handle-width: 17%;
 		@handle-height: 60%;
@@ -55,8 +55,6 @@
 		@opening-height: 8rem;
 		@shadow-extension: 1.5rem;
 		@shadow-opacity: 0.3;
-
-		@border: none; //@border-width solid @border-color; bring this back if you want borders.
 
 		width: 100%;
 		height: 100%;
@@ -78,9 +76,6 @@
 			position: relative;
 			height: ~'calc(100% - @{cheek-height})';
 			box-sizing: border-box;
-			border-top: @border;
-			border-left: @border;
-			border-right: @border;
 			background-color: @skin-color;
 			padding: @head-padding;
 
@@ -129,12 +124,12 @@
 			position: absolute;
 			width: 100%;
 			height: @ear-height;
-			bottom: 0;
+			bottom: -1px; // fixes some glitches when resizing.
 
 			.ear {
 				display: inline-block;
 				.triangle-open-border(@ear-width, @border-width, @skin-color, @border-color);
-				border-bottom: none; // removes borders.
+				border-bottom: none; // override to prevent the ear from having a border.
 
 				&:first-child {
 					float: left;
@@ -156,9 +151,6 @@
 				height: 100%;
 				display: inline-block;
 				box-sizing: border-box;
-				border-bottom: @border;
-				border-left: @border;
-				border-right: @border;
 				background-color: @skin-color;
 
 				&:first-child {
@@ -183,8 +175,6 @@
 				background-color: @skin-color;
 				height: ~'calc(100% - 2 * @{handle-part-width})';
 				position: absolute;
-				border-left: @border;
-				border-right: @border;
 				right: 0;
 				width: @handle-part-width;
 			}
@@ -200,8 +190,6 @@
 					width: ~'calc(100% - @{handle-part-width})';
 					background-color: @skin-color;
 					float: left;
-					border-top: @border;
-					border-bottom: @border;
 				}
 
 				.corner-horizontal-handle {
@@ -211,26 +199,11 @@
 					background-color: @skin-color;
 					position: relative;
 					float: right;
-
-					&:after {
-						content: '';
-						position: absolute;
-						left: 0;
-						width: @border-width;
-						height: @border-width;
-						background-color: none; //@border-color; bring this back if you want borders.
-					}
 				}
 
 				&:first-child {
 					.corner-horizontal-handle {
 						border-top-right-radius: @border-radius;
-						border-right: @border;
-						border-top: @border;
-
-						&:after {
-							bottom: 0;
-						}
 					}
 				}
 
@@ -240,8 +213,6 @@
 
 					.corner-horizontal-handle {
 						border-bottom-right-radius: @border-radius;
-						border-right: @border;
-						border-bottom: @border;
 
 						&:after {
 							top: 0;
