@@ -46,7 +46,7 @@
 		@handle-width: 15%;
 		@handle-height: 60%;
 		@handle-part-width: 3rem;
-		@border: @border-width solid @border-color;
+		@border: none; //@border-width solid @border-color; bring this back if you want borders.
 
 		width: 100%;
 		height: 100%;
@@ -106,6 +106,7 @@
 			.ear {
 				display: inline-block;
 				.triangle-open-border(@ear-width, @border-width, @skin-color, @border-color);
+				border-bottom: none; // removes borders.
 
 				&:first-child {
 					float: left;
@@ -191,7 +192,7 @@
 						left: 0;
 						width: @border-width;
 						height: @border-width;
-						background-color: @border-color;
+						background-color: none; //@border-color; bring this back if you want borders.
 					}
 				}
 
