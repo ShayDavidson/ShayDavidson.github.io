@@ -9,6 +9,12 @@
 	@import "~reset.less";
 	@import '~colors.less';
 
+	@sky-portion: 60%;
+	@coffee-cat-height: 50vh;
+	@coffee-cat-width: 40vw;
+	@coffee-cat-min-height: 30rem;
+	@coffee-cat-min-width: 34rem;
+
 	html, body {
 		width: 100%;
 		height: 100%;
@@ -16,7 +22,7 @@
 	}
 
 	body {
-		background-color: @color-blue;
+		background: linear-gradient(to bottom, @color-blue 0%, @color-blue @sky-portion, @color-wood @sky-portion, @color-wood 100%);
 	}
 
 	.container {
@@ -28,10 +34,10 @@
 	}
 
 	.coffee-cat-container {
-		height: 50vh;
-		width: 40vw;
-		min-height: 30rem;
-		min-width: 34rem;
+		height: @coffee-cat-height;
+		width: @coffee-cat-width;
+		min-height: @coffee-cat-min-height;
+		min-width: @coffee-cat-min-width;
 	}
 </style>
 
