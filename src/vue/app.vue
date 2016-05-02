@@ -16,7 +16,7 @@
 	}
 
 	body {
-		background-color: @color-dry;
+		background-color: @color-blue;
 	}
 
 	.container {

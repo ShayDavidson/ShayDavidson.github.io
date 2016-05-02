@@ -1,15 +1,14 @@
 <template lang="jade">
 	.coffee-cat
-		.ears
-			.ear
-				.inner-ear
-			.ear
-				.inner-ear
 		.head
-			.nose
+			.opening
+				.ears
+					.ear
+					.ear
 			.eyes
 				.eye
 				.eye
+			.nose
 		.cheeks
 			.cheek
 			.cheek
@@ -31,8 +30,12 @@
 		@border-color: @color-orange;
 		@skin-color: @color-yellow;
 		@eye-color: @color-red;
+		@opening-color: @color-yellow-dark;
+		@coffee-color: @color-brown;
+
 		@border-radius: 6rem;
 		@border-width: 0.6rem;
+		@head-padding: 3rem;
 		@cheek-height: 5rem;
 		@nose-width: 5rem;
 		@nose-position-fix: -0.75rem;
@@ -41,11 +44,15 @@
 		@eye-position: 6rem;
 		@ear-width: 4rem;
 		@ear-height: @ear-width * @triangle-multiplier;
-		@ear-padding: 6rem;
-		@inner-ear-width: 2rem;
+		@ear-padding: 3rem;
+		@handle-position: 4rem;
 		@handle-width: 15%;
 		@handle-height: 60%;
 		@handle-part-width: 3rem;
+		@coffee-portion: 80%;
+		@opening-portion: 20%;
+		@opening-height: 8rem;
+
 		@border: none; //@border-width solid @border-color; bring this back if you want borders.
 
 		width: 100%;
@@ -56,12 +63,19 @@
 			position: relative;
 			height: ~'calc(100% - @{cheek-height})';
 			box-sizing: border-box;
-			border-top-left-radius: @border-radius;
-			border-top-right-radius: @border-radius;
 			border-top: @border;
 			border-left: @border;
 			border-right: @border;
 			background-color: @skin-color;
+			padding: @head-padding;
+
+			.opening {
+				width: 100%;
+				height: @opening-height;
+				background: linear-gradient(to bottom, @opening-color 0%, @opening-color @opening-portion, @coffee-color @opening-portion, @coffee-color 100%);
+				margin: 0 auto;
+				position: relative;
+			}
 
 			.nose {
 				left: 50%;
@@ -99,9 +113,8 @@
 		.ears {
 			position: absolute;
 			width: 100%;
-			z-index: 1;
 			height: @ear-height;
-			top: -@ear-height + @border-width;
+			bottom: 0;
 
 			.ear {
 				display: inline-block;
@@ -116,13 +129,6 @@
 				&:last-child {
 					float: right;
 					margin-right: @ear-padding;
-				}
-
-				.inner-ear {
-					position: absolute;
-					transform: translateX(-50%);
-					top: ~'calc(@{ear-width} - @{inner-ear-width} + @{border-width})';
-					.triangle-open-border(@inner-ear-width, @border-width, @skin-color, @border-color);
 				}
 			}
 		}
@@ -146,10 +152,9 @@
 
 		.handle {
 			position: absolute;
-			height: @handle-height;
+			height: ~'calc(100% - @{handle-position} - @{opening-height} - @{head-padding})';
 			width: @handle-width;
-			top: 50%;
-			transform: translateY(-50%);
+			bottom: @handle-position;
 			right: ~'calc(-@{handle-width} + @{border-width})';
 
 			.vertical-handle {
