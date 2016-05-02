@@ -141,12 +141,18 @@
 				height: 100%;
 				display: inline-block;
 				box-sizing: border-box;
-				border-bottom-left-radius: @border-radius;
-				border-bottom-right-radius: @border-radius;
 				border-bottom: @border;
 				border-left: @border;
 				border-right: @border;
 				background-color: @skin-color;
+
+				&:first-child {
+					border-bottom-right-radius: @border-radius;
+				}
+
+				&:last-child {
+					border-bottom-left-radius: @border-radius;
+				}
 			}
 		}
 
