@@ -1,22 +1,30 @@
 <template lang="jade">
 	body
-		.center-container(style="width: 50%")
-			coffee-cat
+		.container
+			.coffee-cat-container
+				coffee-cat
 </template>
 
 <style lang="less">
 	@import "~reset.less";
 
-	html {
+	html, body {
+		width: 100%;
+		height: 100%;
 		font-size: 1vw;
 	}
 
-	.center-container {
-		margin: 0 auto;
+	.container {
+		width: 100%;
 		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+
+	.coffee-cat-container {
+		height: 30vh;
+		width: 50%;
 	}
 </style>
 

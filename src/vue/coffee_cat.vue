@@ -37,8 +37,8 @@
 		@ear-padding: @base-rem / 10;
 		@inner-ear-width: @base-rem / 30;
 
-		width: @base-rem;
-		height: 30vh;
+		width: 100%;
+		height: 100%;
 		min-height: @base-rem / 3;
 		position: relative;
 
