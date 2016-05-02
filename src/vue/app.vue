@@ -14,6 +14,10 @@
 		font-size: 1vw;
 	}
 
+	body {
+		background-color: #CBDFBD;
+	}
+
 	.container {
 		width: 100%;
 		height: 100%;

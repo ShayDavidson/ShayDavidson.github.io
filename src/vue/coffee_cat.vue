@@ -13,7 +13,7 @@
 		.cheeks
 			.cheek
 			.cheek
-		//- .handle
+		.handle
 </template>
 
 <style lang="less">
@@ -22,7 +22,7 @@
 	.coffee-cat {
 		@border-color: #F19C79;
 		@skin-color: #F6F4D2;
-		@eye-color: #3C3C3C;
+		@eye-color: #A44A3F;
 		@border-radius: 6rem;
 		@border-width: 0.6rem;
 		@cheek-height: 5rem;
@@ -135,7 +135,7 @@
 
 		.handle {
 			position: absolute;
-			height: 5ck 0%;
+			height: 50%;
 			width: 20%;
 			box-sizing: border-box;
 			background-color: @skin-color;
