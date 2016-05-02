@@ -1,5 +1,6 @@
-<template lang="jade">
+<template lang='jade'>
 	.coffee-cat
+		.shadow(v-if='shadow')
 		.head
 			.opening
 				.ears
@@ -22,7 +23,7 @@
 				.corner-horizontal-handle
 </template>
 
-<style lang="less">
+<style lang='less'>
 	@import '~triangles.less';
 	@import '~colors.less';
 
@@ -52,12 +53,26 @@
 		@coffee-portion: 80%;
 		@opening-portion: 20%;
 		@opening-height: 8rem;
+		@shadow-extension: 1.5rem;
+		@shadow-opacity: 0.3;
 
 		@border: none; //@border-width solid @border-color; bring this back if you want borders.
 
 		width: 100%;
 		height: 100%;
 		position: relative;
+
+		.shadow {
+			position: absolute;
+			width: ~'calc(100% + @{shadow-extension})';
+			height: @shadow-extension;
+			background-color: black;
+			opacity: @shadow-opacity;
+			transform: translateX(-50%);
+			bottom: -@shadow-extension / 2;
+			left: 50%;
+			z-index: -2;
+		}
 
 		.head {
 			position: relative;
@@ -240,6 +255,6 @@
 
 <script>
 	export default {
-
+		props: ['shadow']
 	}
 </script>

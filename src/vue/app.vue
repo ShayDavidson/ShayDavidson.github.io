@@ -2,7 +2,7 @@
 	body
 		.container
 			.coffee-cat-container
-				coffee-cat
+				coffee-cat(shadow=true)
 </template>
 
 <style lang="less">
