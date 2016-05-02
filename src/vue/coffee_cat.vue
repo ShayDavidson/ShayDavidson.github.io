@@ -13,6 +13,7 @@
 				.inner-ear
 			.ear
 				.inner-ear
+		//- .handle
 </template>
 
 <style lang="less">
@@ -25,18 +26,21 @@
 		@border-color: #F19C79;
 		@skin-color: #F6F4D2;
 		@eye-color: #3C3C3C;
+		@cheek-height: @base-rem / 12;
 		@head-base-height: 80%;
 		@nose-width: @base-rem / 12;
-		@nose-position: @base-rem / -75;
+		@nose-position: @base-rem / -80;
 		@eye-width: @base-rem / 20;
 		@eye-padding: @base-rem / 6;
 		@eye-position: @base-rem / 10;
 		@ear-width: @base-rem / 15;
-		@ear-padding: @base-rem / 8;
+		@ear-padding: @base-rem / 10;
 		@inner-ear-width: @base-rem / 30;
 
 		width: @base-rem;
-		height: @base-rem / 3;
+		height: 30vh;
+		min-height: @base-rem / 3;
+		position: relative;
 
 		.head {
 			position: relative;
@@ -64,7 +68,7 @@
 				transform: translateX(-50%);
 				position: absolute;
 				width: 100%;
-				top: @eye-position;
+				bottom: @eye-position;
 
 				.eye {
 					display: inline-block;
@@ -84,8 +88,11 @@
 		}
 
 		.ears {
-			position: relative;
-			top: ~'calc(-100% - @{ear-width} - @{border-width} + 1px)';
+			@height: @ear-width * @triangle-multiplier;
+			position: absolute;
+			width: 100%;
+			height: @height;
+			top: ~'calc(-@{height} + @{border-width})';
 
 			.ear {
 				display: inline-block;
@@ -112,7 +119,7 @@
 
 	  .cheeks {
 			width: 100%;
-			height: 100% - @head-base-height;
+			height: @cheek-height;
 
 			.cheek {
 				width: 50%;
@@ -126,6 +133,16 @@
 				border-right: @border-width solid @border-color;
 				background-color: @skin-color;
 			}
+		}
+
+		.handle {
+			position: absolute;
+			height: 5ck 0%;
+			width: 20%;
+			box-sizing: border-box;
+			background-color: @skin-color;
+			border-radius: @border-radius;
+			border: @border-width solid @border-color;
 		}
 	}
 </style>
