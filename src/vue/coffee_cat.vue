@@ -26,9 +26,8 @@
 		@border-radius: 6rem;
 		@border-width: 0.6rem;
 		@cheek-height: 5rem;
-		@head-base-height: 80%;
 		@nose-width: 5rem;
-		@nose-position: -0.75rem;
+		@nose-position-fix: -0.75rem;
 		@eye-width: 3rem;
 		@eye-padding: 10rem;
 		@eye-position: 6rem;
@@ -58,7 +57,7 @@
 				left: 50%;
 				transform: translateX(-50%);
 				position: absolute;
-				bottom: @nose-position;
+				bottom: @nose-position-fix;
 				.triangle-flipped(@nose-width, @border-color);
 			}
 
