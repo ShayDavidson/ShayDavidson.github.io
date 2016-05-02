@@ -41,12 +41,12 @@
 		@nose-position-fix: -0.75rem;
 		@eye-width: 3rem;
 		@eye-padding: 10rem;
-		@eye-position: 6rem;
+		@eye-position: 7rem;
 		@ear-width: 4rem;
 		@ear-height: @ear-width * @triangle-multiplier;
 		@ear-padding: 3rem;
 		@handle-position: 4rem;
-		@handle-width: 15%;
+		@handle-width: 17%;
 		@handle-height: 60%;
 		@handle-part-width: 3rem;
 		@coffee-portion: 80%;
@@ -152,7 +152,7 @@
 
 		.handle {
 			position: absolute;
-			height: ~'calc(100% - @{handle-position} - @{opening-height} - @{head-padding})';
+			height: ~'calc(100% - @{handle-position} - @{opening-height} - (2 * @{head-padding}))';
 			width: @handle-width;
 			bottom: @handle-position;
 			right: ~'calc(-@{handle-width} + @{border-width})';
