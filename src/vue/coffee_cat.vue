@@ -41,10 +41,9 @@
 		position: relative;
 
 		.head {
-			margin-top: -@border-width;
 			position: relative;
 			width: 100%;
-			height: ~'calc(100% - @{ear-height} - @{cheek-height} + @{border-width})';
+			height: ~'calc(100% - @{cheek-height})';
 			box-sizing: border-box;
 			border-top-left-radius: @border-radius;
 			border-top-right-radius: @border-radius;
@@ -87,10 +86,11 @@
 		}
 
 		.ears {
+			position: absolute;
 			width: 100%;
 			z-index: 1;
-			position: relative;
 			height: @ear-height;
+			top: -@ear-height + @border-width;
 
 			.ear {
 				display: inline-block;
