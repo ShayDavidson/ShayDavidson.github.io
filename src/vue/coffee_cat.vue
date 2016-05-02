@@ -20,27 +20,27 @@
 	@import '~triangles.less';
 
 	.coffee-cat {
-		@base-rem: 60rem;
-		@border-radius: @base-rem / 10;
-		@border-width: @base-rem / 100;
 		@border-color: #F19C79;
 		@skin-color: #F6F4D2;
 		@eye-color: #3C3C3C;
-		@cheek-height: @base-rem / 12;
+		@min-height: 20rem;
+		@border-radius: 6rem;
+		@border-width: 0.6rem;
+		@cheek-height: 5rem;
 		@head-base-height: 80%;
-		@nose-width: @base-rem / 12;
-		@nose-position: @base-rem / -80;
-		@eye-width: @base-rem / 20;
-		@eye-padding: @base-rem / 6;
-		@eye-position: @base-rem / 10;
-		@ear-width: @base-rem / 15;
-		@hear-height: @ear-width * @triangle-multiplier;
-		@ear-padding: @base-rem / 10;
-		@inner-ear-width: @base-rem / 30;
+		@nose-width: 5rem;
+		@nose-position: -0.75rem;
+		@eye-width: 3rem;
+		@eye-padding: 10rem;
+		@eye-position: 6rem;
+		@ear-width: 4rem;
+		@ear-height: @ear-width * @triangle-multiplier;
+		@ear-padding: 6rem;
+		@inner-ear-width: 2rem;
 
 		width: 100%;
 		height: 100%;
-		min-height: @base-rem / 3;
+		min-height: @min-height;
 		position: relative;
 
 		.head {
@@ -93,7 +93,7 @@
 			width: 100%;
 			z-index: 1;
 			position: relative;
-			height: @hear-height;
+			height: @ear-height;
 
 			.ear {
 				display: inline-block;
