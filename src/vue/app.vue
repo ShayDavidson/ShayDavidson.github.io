@@ -3,6 +3,8 @@
 		.container
 			.coffee-cat-container
 				coffee-cat(shadow=true)
+				//- code-vapor(code='export function isLoggedIn(req) { return !!req.user } ')
+
 </template>
 
 <style lang="less">
@@ -38,15 +40,18 @@
 		width: @coffee-cat-width;
 		min-height: @coffee-cat-min-height;
 		min-width: @coffee-cat-min-width;
+		position: relative;
 	}
 </style>
 
 <script>
 	import CoffeeCat from "coffee_cat.vue"
+	import CodeVapor from "code_vapor.vue"
 
 	export default {
 		components: {
-			CoffeeCat
+			CoffeeCat,
+			CodeVapor
 		}
 	}
 </script>

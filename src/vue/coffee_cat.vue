@@ -128,8 +128,7 @@
 
 			.ear {
 				display: inline-block;
-				.triangle-open-border(@ear-width, @border-width, @skin-color, @border-color);
-				border-bottom: none; // override to prevent the ear from having a border.
+				.triangle(@ear-width, @skin-color);
 
 				&:first-child {
 					float: left;
