@@ -172,7 +172,7 @@
 			.vertical-handle {
 				box-sizing: border-box;
 				background-color: @skin-color;
-				height: ~'calc(100% - 2 * @{handle-part-width})';
+				height: ~'calc(100% - 2 * @{handle-part-width} + 1px)'; // fixes 1px gap in webkit in mobile
 				position: absolute;
 				right: 0;
 				width: @handle-part-width;
