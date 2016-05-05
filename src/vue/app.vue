@@ -1,4 +1,4 @@
-<template lang="jade">
+w<template lang="jade">
 	body
 		.container
 			.coffee-cat-container
@@ -15,6 +15,7 @@
 	@coffee-cat-height: 50vh;
 	@coffee-cat-width: 40vw;
 	@coffee-cat-min-height: 30rem;
+	@coffee-cat-max-height: 60rem;
 	@coffee-cat-min-width: 34rem;
 
 	html, body {
@@ -39,6 +40,7 @@
 		height: @coffee-cat-height;
 		width: @coffee-cat-width;
 		min-height: @coffee-cat-min-height;
+		max-height: @coffee-cat-max-height;
 		min-width: @coffee-cat-min-width;
 		position: relative;
 	}
