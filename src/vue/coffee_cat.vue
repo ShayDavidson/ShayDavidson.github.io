@@ -186,7 +186,7 @@
 				.flat-horizontal-handle {
 					box-sizing: border-box;
 					height: 100%;
-					width: ~'calc(100% - @{handle-part-width})';
+					width: ~'calc(100% - @{handle-part-width} + 1px)'; // fixes 1px gap in webkit in mobile
 					background-color: @skin-color;
 					float: left;
 				}
