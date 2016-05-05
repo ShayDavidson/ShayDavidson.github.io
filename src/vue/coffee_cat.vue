@@ -196,8 +196,8 @@
 					height: @handle-part-width;
 					width: @handle-part-width;
 					background-color: @skin-color;
-					position: relative;
-					float: right;
+					position: absolute;
+					right: 0;
 				}
 
 				&:first-child {
