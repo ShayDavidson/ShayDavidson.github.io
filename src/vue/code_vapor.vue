@@ -28,6 +28,12 @@
 			}
 		},
 
+		data() {
+			return {
+				charIndex: 0
+			}
+		},
+
 		computed: {
 			sanitizedCode() {
 				return this.code.replace(/ /g,'')
@@ -36,7 +42,8 @@
 
 		methods: {
 			spawnChar() {
-				console.log('yuey')
+				let spawnedChar = this.sanitizedCode[this.charIndex % this.sanitizedCode.length]
+				this.charIndex += 1
 			}
 		},
 

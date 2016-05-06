@@ -10661,6 +10661,12 @@
 			}
 		},
 
+		data: function data() {
+			return {
+				charIndex: 0
+			};
+		},
+
 		computed: {
 			sanitizedCode: function sanitizedCode() {
 				return this.code.replace(/ /g, '');
@@ -10669,7 +10675,8 @@
 
 		methods: {
 			spawnChar: function spawnChar() {
-				console.log('yuey');
+				var spawnedChar = this.sanitizedCode[this.charIndex % this.sanitizedCode.length];
+				this.charIndex += 1;
 			}
 		},
 
@@ -10693,7 +10700,7 @@
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat><code-vapor :interval=\"1000\" code=\"export function isLoggedIn(req) { return !!req.user } \"></code-vapor></div></div></body>";
+	module.exports = "<body><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat><code-vapor :interval=\"50\" code=\"export function isLoggedIn(req) { return !!req.user } \"></code-vapor></div></div></body>";
 
 /***/ }
 /******/ ]);

@@ -3,7 +3,7 @@ w<template lang="jade">
 		.container
 			.coffee-cat-container
 				coffee-cat(shadow=true)
-				code-vapor(:interval=1000, code='export function isLoggedIn(req) { return !!req.user } ')
+				code-vapor(:interval=50, code='export function isLoggedIn(req) { return !!req.user } ')
 
 </template>
 
