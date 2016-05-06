@@ -10640,7 +10640,7 @@
 
 
 	// module
-	exports.push([module.id, ".code-vapor {\n  font-size: 15px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #a38a87;\n}\n", ""]);
+	exports.push([module.id, "@-webkit-keyframes vaporize {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes vaporize {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.code-vapor {\n  font-size: 15px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #a38a87;\n}\n.code-vapor .code-char {\n  -webkit-animation: vaporize 1s ease-out;\n          animation: vaporize 1s ease-out;\n}\n", ""]);
 
 	// exports
 
@@ -10675,7 +10675,18 @@
 
 		methods: {
 			spawnChar: function spawnChar() {
+				var _this = this;
+
 				var spawnedChar = this.sanitizedCode[this.charIndex % this.sanitizedCode.length];
+
+				var element = document.createElement('div');
+				element.className = 'code-char';
+				element.innerHTML = spawnedChar;
+				element.addEventListener('animationend', function (event) {
+					_this.$el.removeChild(event.srcElement);
+				}, false);
+				this.$el.appendChild(element);
+
 				this.charIndex += 1;
 			}
 		},
@@ -10694,7 +10705,7 @@
 /* 26 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"code-vapor\">{{sanitizedCode}}<div class=\"code-char\"></div></div>";
+	module.exports = "<div class=\"code-vapor\"></div>";
 
 /***/ },
 /* 27 */

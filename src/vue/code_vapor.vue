@@ -1,11 +1,19 @@
 <template lang='jade'>
-	.code-vapor {{sanitizedCode}}
-		.code-char
+	.code-vapor
 </template>
 
 <style lang='less'>
 	@import '~fonts.less';
 	@import '~colors.less';
+
+	@keyframes vaporize {
+		0% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
 
 	.code-vapor {
 		font-size: 15px;
@@ -13,7 +21,7 @@
 		color: @color-gray;
 
 		.code-char {
-
+			animation: vaporize 1s ease-out;
 		}
 	}
 </style>
@@ -42,7 +50,16 @@
 
 		methods: {
 			spawnChar() {
-				let spawnedChar = this.sanitizedCode[this.charIndex % this.sanitizedCode.length]
+				const spawnedChar = this.sanitizedCode[this.charIndex % this.sanitizedCode.length]
+
+				let element = document.createElement('div')
+				element.className = 'code-char'
+				element.innerHTML = spawnedChar
+				element.addEventListener('animationend', (event) => {
+					this.$el.removeChild(event.srcElement)
+				}, false);
+				this.$el.appendChild(element)
+
 				this.charIndex += 1
 			}
 		},
