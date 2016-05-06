@@ -10148,7 +10148,7 @@
 
 
 	// module
-	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 1vw;\n}\nbody {\n  background: -webkit-linear-gradient(top, #bcddca 0%, #bcddca 60%, #9b8c73 60%, #9b8c73 100%);\n  background: linear-gradient(to bottom, #bcddca 0%, #bcddca 60%, #9b8c73 60%, #9b8c73 100%);\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.coffee-cat-container {\n  height: 50vh;\n  width: 40vw;\n  min-height: 30rem;\n  min-width: 34rem;\n  position: relative;\n}\n", ""]);
+	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 1vw;\n}\nbody {\n  background: -webkit-linear-gradient(top, #bcddca 0%, #bcddca 60%, #9b8c73 60%, #9b8c73 100%);\n  background: linear-gradient(to bottom, #bcddca 0%, #bcddca 60%, #9b8c73 60%, #9b8c73 100%);\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.coffee-cat-container {\n  height: 50vh;\n  width: 40vw;\n  min-height: 30rem;\n  min-width: 34rem;\n  position: relative;\n}\n.code-vapor {\n  position: absolute;\n}\n.code-vapor.code-vapor-1 {\n  left: 12%;\n  top: 5rem;\n}\n.code-vapor.code-vapor-2 {\n  left: 45%;\n  top: 6rem;\n}\n.code-vapor.code-vapor-3 {\n  left: 80%;\n  top: 4rem;\n}\n", ""]);
 
 	// exports
 
@@ -10640,7 +10640,7 @@
 
 
 	// module
-	exports.push([module.id, "@-webkit-keyframes vaporize {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes vaporize {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.code-vapor {\n  font-size: 15px;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #a38a87;\n}\n.code-vapor .code-char {\n  -webkit-animation: vaporize 1s ease-out;\n          animation: vaporize 1s ease-out;\n}\n", ""]);
+	exports.push([module.id, "@-webkit-keyframes vaporize {\n  0% {\n    left: 1.05183873rem;\n    opacity: 0;\n    top: 0;\n  }\n  5% {\n    opacity: 1;\n  }\n  33% {\n    left: -1.05183873rem;\n  }\n  66% {\n    left: 1.05183873rem;\n  }\n  100% {\n    font-size: 2rem;\n    left: -1.05183873rem;\n    opacity: 0;\n    top: -30rem;\n  }\n}\n@keyframes vaporize {\n  0% {\n    left: 1.05183873rem;\n    opacity: 0;\n    top: 0;\n  }\n  5% {\n    opacity: 1;\n  }\n  33% {\n    left: -1.05183873rem;\n  }\n  66% {\n    left: 1.05183873rem;\n  }\n  100% {\n    font-size: 2rem;\n    left: -1.05183873rem;\n    opacity: 0;\n    top: -30rem;\n  }\n}\n.code-vapor {\n  font-size: 3rem;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #a38a87;\n  text-align: center;\n}\n.code-vapor .code-char {\n  -webkit-animation: vaporize 2.5s;\n          animation: vaporize 2.5s;\n  position: absolute;\n}\n", ""]);
 
 	// exports
 
@@ -10652,6 +10652,13 @@
 	'use strict';
 
 	exports.__esModule = true;
+	function createCodeCharElement(char) {
+		var element = document.createElement('div');
+		element.className = 'code-char';
+		element.innerHTML = char;
+		return element;
+	}
+
 	exports['default'] = {
 		props: {
 			code: String,
@@ -10667,26 +10674,16 @@
 			};
 		},
 
-		computed: {
-			sanitizedCode: function sanitizedCode() {
-				return this.code.replace(/ /g, '');
-			}
-		},
-
 		methods: {
 			spawnChar: function spawnChar() {
 				var _this = this;
 
-				var spawnedChar = this.sanitizedCode[this.charIndex % this.sanitizedCode.length];
-
-				var element = document.createElement('div');
-				element.className = 'code-char';
-				element.innerHTML = spawnedChar;
-				element.addEventListener('animationend', function (event) {
-					_this.$el.removeChild(event.srcElement);
-				}, false);
+				var spawnedChar = this.code[this.charIndex % this.code.length];
+				var element = createCodeCharElement(spawnedChar);
 				this.$el.appendChild(element);
-
+				element.addEventListener('animationend', function () {
+					_this.$el.removeChild(element);
+				}, false);
 				this.charIndex += 1;
 			}
 		},
@@ -10711,7 +10708,7 @@
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat><code-vapor :interval=\"50\" code=\"export function isLoggedIn(req) { return !!req.user } \"></code-vapor></div></div></body>";
+	module.exports = "<body><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat><code-vapor :interval=\"220\" code=\"import CoffeeCat from &quot;coffee_cat.vue&quot;\" class=\"code-vapor-1\"></code-vapor><code-vapor :interval=\"320\" code=\"const spawnedChar = this.code[this.charIndex % this.code.length]\" class=\"code-vapor-2\"></code-vapor><code-vapor :interval=\"250\" code=\"function createCodeCharElement(char) { } );\" class=\"code-vapor-3\"></code-vapor></div></div></body>";
 
 /***/ }
 /******/ ]);
