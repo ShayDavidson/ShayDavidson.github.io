@@ -10668,7 +10668,7 @@
 			},
 			numberOfSegments: {
 				type: Number,
-				'default': 35
+				'default': 50
 			}
 		},
 
