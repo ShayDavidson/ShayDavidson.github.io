@@ -4,6 +4,7 @@
 		.container
 			.coffee-cat-container
 				coffee-cat(shadow=true)
+		app-footer
 
 </template>
 
@@ -54,10 +55,12 @@
 
 <script>
 	import CoffeeCat from 'coffee_cat.vue'
+	import AppFooter from 'app_footer.vue'
 
 	export default {
 		components: {
-			CoffeeCat
+			CoffeeCat,
+			AppFooter
 		}
 	}
 </script>

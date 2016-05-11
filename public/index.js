@@ -10094,7 +10094,7 @@
 
 	__webpack_require__(7)
 	module.exports = __webpack_require__(11)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(23)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(28)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10474,9 +10474,14 @@
 
 	var _coffee_catVue2 = _interopRequireDefault(_coffee_catVue);
 
+	var _app_footerVue = __webpack_require__(23);
+
+	var _app_footerVue2 = _interopRequireDefault(_app_footerVue);
+
 	exports['default'] = {
 		components: {
-			CoffeeCat: _coffee_catVue2['default']
+			CoffeeCat: _coffee_catVue2['default'],
+			AppFooter: _app_footerVue2['default']
 		}
 	};
 	module.exports = exports['default'];
@@ -10713,9 +10718,93 @@
 
 /***/ },
 /* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(24)
+	module.exports = __webpack_require__(26)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(27)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app_footer.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app_footer.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./app_footer.vue"], function () {
+	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./app_footer.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./app_footer.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 24 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(25);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(10)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8f4d56e6&file=app_footer.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./app_footer.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8f4d56e6&file=app_footer.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./app_footer.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(9)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "footer {\n  position: absolute;\n  bottom: 0;\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\n  font-size: 12px;\n  color: #482a23;\n  text-align: center;\n  width: 100%;\n  padding: 1em;\n  box-sizing: border-box;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 26 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div class=\"table\"></div><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat></div></div></body>";
+	"use strict";
+
+	exports.__esModule = true;
+	exports["default"] = {
+		computed: {
+			year: function year() {
+				return new Date().getFullYear();
+			}
+		}
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	module.exports = "<footer>Developed by Shay Davidson &copy; {{year}}</footer>";
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	module.exports = "<body><div class=\"table\"></div><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat></div></div><app-footer></app-footer></body>";
 
 /***/ }
 /******/ ]);
