@@ -1,5 +1,6 @@
-w<template lang="jade">
+<template lang="jade">
 	body
+		.table
 		.container
 			.coffee-cat-container
 				coffee-cat(shadow=true)
@@ -10,7 +11,7 @@ w<template lang="jade">
 	@import "~reset.less";
 	@import '~colors.less';
 
-	@sky-portion: 60%;
+	@table-size: 40%;
 	@coffee-cat-height: 50vh;
 	@coffee-cat-width: 40vw;
 	@coffee-cat-min-height: 30rem;
@@ -23,7 +24,15 @@ w<template lang="jade">
 	}
 
 	body {
-		background: linear-gradient(to bottom, @color-blue 0%, @color-blue @sky-portion, @color-wood @sky-portion, @color-wood 100%);
+		background-color: @color-blue;
+	}
+
+	.table {
+		background-color: @color-wood;
+		height: 40%;
+		width: 100%;
+		position: absolute;
+		bottom: 0;
 	}
 
 	.container {

@@ -71,7 +71,6 @@
 			transform: translateX(-50%);
 			bottom: -@shadow-extension / 2;
 			left: 50%;
-			z-index: -2;
 		}
 
 		.head {
@@ -155,6 +154,8 @@
 
 	  .cheeks {
 			height: @cheek-height;
+			position: relative;
+			z-index: 1; // to be on top of shadow.
 
 			.cheek {
 				width: 50%;
