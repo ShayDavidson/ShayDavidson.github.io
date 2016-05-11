@@ -35,7 +35,7 @@
 			},
 			numberOfSegments: {
 				type: Number,
-				default: 50
+				default: 40
 			}
 		},
 
