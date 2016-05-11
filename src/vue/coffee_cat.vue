@@ -75,6 +75,7 @@
 
 		.head {
 			position: relative;
+			z-index: 2;
 			height: ~'calc(100% - @{cheek-height})';
 			box-sizing: border-box;
 			background-color: @skin-color;
