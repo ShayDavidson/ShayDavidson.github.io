@@ -11,7 +11,7 @@ module.exports = {
 		loaders: [
 			{ loader: 'vue', test: /\.vue$/ },
 			{ loader: 'json', test: /\.json$/ },
-			{ loader: 'babel-loader', test: /\.es6$/ }
+			{ loader: 'babel', test: /\.es6$/ }
 		]
 	},
 	vue: {

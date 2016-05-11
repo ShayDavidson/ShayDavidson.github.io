@@ -3,6 +3,7 @@
 		.shadow(v-if='shadow')
 		.head
 			.opening
+				vapor(height='20vh')
 				.ears
 					.ear
 					.ear
@@ -224,7 +225,12 @@
 </style>
 
 <script>
+	import Vapor from 'vapor.vue'
+
 	export default {
-		props: ['shadow']
+		props: ['shadow'],
+		components: {
+			Vapor
+		}
 	}
 </script>

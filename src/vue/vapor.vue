@@ -1,5 +1,5 @@
 <template lang='jade'>
-	.code-vapor
+	.vapor
 </template>
 
 <style lang='less'>
@@ -18,10 +18,10 @@
 		5% {
 			opacity: 1;
 		}
-		33% {
+		20% {
 			left: sin(-1) * @vapor-sin-multiplier;
 		}
-		66% {
+		50% {
 			left: sin(1) * @vapor-sin-multiplier;
 		}
 		100% {
@@ -29,63 +29,66 @@
 			left: sin(-1) * @vapor-sin-multiplier;;
 			opacity: 0;
 			top: -@top-vapor-reach;
+			width: 50%;
 		}
 	}
 
-	.code-vapor {
+	.vapor {
 		font-size: 3rem;
 		font-family: @base-font;
 		color: @color-gray;
 		text-align: center;
+		position: relative;
+		top: 3rem;
 
-		.code-char {
-			animation: vaporize 2.5s;
+		.vapor-rectangle {
 			position: absolute;
+			background-color: @color-brown-light;
+			height: 1rem;
+			width: 100%;
+			animation: vaporize 1s;
 		}
 	}
 </style>
 
 <script>
-	function createCodeCharElement(char) {
+	function createVaporRectangle() {
 		let element = document.createElement('div')
-		element.className = 'code-char'
-		element.innerHTML = char
-		return element;
+		element.className = 'vapor-rectangle'
+		return element
 	}
 
 	export default {
 		props: {
-			code: String,
-			interval: {
+			height: String,
+			duration: {
 				type: Number,
-				default: 500
+				default: 1000
+			},
+			numberOfSegments: {
+				type: Number,
+				default: 20
 			}
 		},
 
-		data() {
-			return {
-				charIndex: 0
+		computed: {
+			segments() {
+				let array = new Array(this.numberOfSegments)
+				for (let i = 0; i < this.numberOfSegments; i++) {
+					array[i] = {}
+				}
+				return array
 			}
 		},
 
 		methods: {
-			spawnChar() {
-				const spawnedChar = this.code[this.charIndex % this.code.length]
-				const element = createCodeCharElement(spawnedChar)
+			spawnVaporRectangle() {
+				const element = createVaporRectangle()
 				this.$el.appendChild(element)
 				element.addEventListener('animationend', () => {
 					this.$el.removeChild(element)
-				}, false);
-				this.charIndex += 1
+				}, false)
 			}
-		},
-
-		created() {
-			this.intervalId = setInterval(this.spawnChar, this.interval)
-		},
-
-		destroyed() {
-			window.clearInterval(this.intervalId)
 		}
 	}
 </script>
