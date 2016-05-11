@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+
     <link rel="icon" href="favicon.png">
+
     <title>🐱☕</title>
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -12,7 +15,31 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-49127540-4', 'auto');
       ga('send', 'pageview');
-  </script>
+    </script>
+
+    <script type="text/javascript">
+      (function(e, t) {
+          function r(e, t) {
+              e[t] = function() {
+                  e.push([ t ].concat(Array.prototype.slice.call(arguments, 0)));
+              };
+          }
+          var n = "JacoRecorder";
+          (function(e, t, i, s) {
+              if (!i.__VERSION) {
+                  e[n] = i;
+                  var o = [ "init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo" ];
+                  for (var u = 0; u < o.length; u++) r(i, o[u]);
+                  i.__VERSION = .9, i.__INIT_TIME = 1 * new Date;
+                  var a = t.createElement("script");
+                  a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = s;
+                  var f = t.getElementsByTagName("head")[0];
+                  f.appendChild(a);
+              }
+          })(e, t, e[n] || [], "//recorder-assets.getjaco.com/recorder.js");
+      }).call(window, window, document), window.JacoRecorder.push([ "init", "1adc1e01-0dd6-4317-b465-68bd0566caf2", {} ]);
+    </script>
+
   </head>
   <body>
     <app></app>

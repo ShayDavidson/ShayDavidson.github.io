@@ -50,6 +50,7 @@
 	var App = __webpack_require__(10);
 
 	Vue.config.debug = true;
+	Vue.config.devtools = false;
 
 	new Vue({ // eslint-disable-line no-new
 		el: 'html',
@@ -10708,7 +10709,7 @@
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat><code-vapor :interval=\"220\" code=\"import CoffeeCat from &quot;coffee_cat.vue&quot;\" class=\"code-vapor-1\"></code-vapor><code-vapor :interval=\"320\" code=\"const spawnedChar = this.code[this.charIndex % this.code.length]\" class=\"code-vapor-2\"></code-vapor><code-vapor :interval=\"250\" code=\"function createCodeCharElement(char) { } );\" class=\"code-vapor-3\"></code-vapor></div></div></body>";
+	module.exports = "<body><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat></div></div></body>";
 
 /***/ }
 /******/ ]);

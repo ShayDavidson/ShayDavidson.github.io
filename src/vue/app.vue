@@ -3,9 +3,9 @@ w<template lang="jade">
 		.container
 			.coffee-cat-container
 				coffee-cat(shadow=true)
-				code-vapor(class='code-vapor-1', :interval=220, code='import CoffeeCat from "coffee_cat.vue"')
-				code-vapor(class='code-vapor-2', :interval=320, code='const spawnedChar = this.code[this.charIndex % this.code.length]')
-				code-vapor(class='code-vapor-3', :interval=250, code='function createCodeCharElement(char) { } );')
+				//- code-vapor(class='code-vapor-1', :interval=220, code='import CoffeeCat from "coffee_cat.vue"')
+				//- code-vapor(class='code-vapor-2', :interval=320, code='const spawnedChar = this.code[this.charIndex % this.code.length]')
+				//- code-vapor(class='code-vapor-3', :interval=250, code='function createCodeCharElement(char) { } );')
 
 </template>
 
