@@ -1,52 +1,20 @@
 <template lang='jade'>
-	.vapor
+	.vapor(v-bind:style='{ height: height }')
+		.vapor-rectangle(v-for="segmentStyle in segments", v-bind:style='segmentStyle')
 </template>
 
 <style lang='less'>
-	@import '~fonts.less';
 	@import '~colors.less';
-
-	@top-vapor-reach: 30rem;
-	@vapor-sin-multiplier: 1.25rem;
-
-	@keyframes vaporize {
-		0% {
-			left: sin(1) * @vapor-sin-multiplier;
-			opacity: 0;
-			top: 0;
-		}
-		5% {
-			opacity: 1;
-		}
-		20% {
-			left: sin(-1) * @vapor-sin-multiplier;
-		}
-		50% {
-			left: sin(1) * @vapor-sin-multiplier;
-		}
-		100% {
-			font-size: 2rem;
-			left: sin(-1) * @vapor-sin-multiplier;;
-			opacity: 0;
-			top: -@top-vapor-reach;
-			width: 50%;
-		}
-	}
+	@import '~animations.less';
 
 	.vapor {
-		font-size: 3rem;
-		font-family: @base-font;
-		color: @color-gray;
-		text-align: center;
-		position: relative;
-		top: 3rem;
-
 		.vapor-rectangle {
 			position: absolute;
 			background-color: @color-brown-light;
-			height: 1rem;
 			width: 100%;
-			animation: vaporize 1s;
+			animation: wobble;
+			animation-fill-mode: both;
+			animation-iteration-count: infinite;
 		}
 	}
 </style>
@@ -60,22 +28,30 @@
 
 	export default {
 		props: {
-			height: String,
+			height: String, // css property
 			duration: {
 				type: Number,
-				default: 1000
+				default: 1000 // ms
 			},
 			numberOfSegments: {
 				type: Number,
-				default: 20
+				default: 35
 			}
 		},
 
 		computed: {
 			segments() {
 				let array = new Array(this.numberOfSegments)
+				let height = 100 / this.numberOfSegments
 				for (let i = 0; i < this.numberOfSegments; i++) {
-					array[i] = {}
+					let ratio = i / (this.numberOfSegments)
+					array[i] = {
+						opacity: 1 - ratio,
+						animationDelay: `${ratio * this.duration}ms`,
+						animationDuration: `${this.duration}ms`,
+						height: `${height}%`,
+						bottom: `${i * height}%`
+					}
 				}
 				return array
 			}

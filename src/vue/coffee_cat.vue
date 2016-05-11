@@ -56,6 +56,7 @@
 		@opening-height: 8rem;
 		@shadow-extension: 1.5rem;
 		@shadow-opacity: 0.3;
+		@vapor-width: 60%;
 
 		width: 100%;
 		height: 100%;
@@ -86,6 +87,15 @@
 				background: linear-gradient(to bottom, @opening-color 0%, @opening-color @opening-portion, @coffee-color @opening-portion, @coffee-color 100%);
 				margin: 0 auto;
 				position: relative;
+
+				.vapor {
+					width: @vapor-width;
+					position: absolute;
+					left: 50%;
+					transform: translateX(-50%);
+					bottom: @opening-height / 3;
+					opacity: 0.5;
+				}
 			}
 
 			.nose {

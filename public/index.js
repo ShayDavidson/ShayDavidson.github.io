@@ -46,8 +46,8 @@
 
 	'use strict';
 
-	var Vue = __webpack_require__(8);
-	var App = __webpack_require__(10);
+	var Vue = __webpack_require__(4);
+	var App = __webpack_require__(6);
 
 	Vue.config.debug = true;
 	Vue.config.devtools = false;
@@ -63,11 +63,7 @@
 /* 1 */,
 /* 2 */,
 /* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -9993,10 +9989,10 @@
 	}, 0);
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(9)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(5)))
 
 /***/ },
-/* 9 */
+/* 5 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -10093,12 +10089,12 @@
 
 
 /***/ },
-/* 10 */
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(11)
-	module.exports = __webpack_require__(15)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(27)
+	__webpack_require__(7)
+	module.exports = __webpack_require__(11)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(23)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10115,16 +10111,16 @@
 	}
 
 /***/ },
-/* 11 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(12);
+	var content = __webpack_require__(8);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(14)(content, {});
+	var update = __webpack_require__(10)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10141,10 +10137,10 @@
 	}
 
 /***/ },
-/* 12 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(13)();
+	exports = module.exports = __webpack_require__(9)();
 	// imports
 
 
@@ -10155,7 +10151,7 @@
 
 
 /***/ },
-/* 13 */
+/* 9 */
 /***/ function(module, exports) {
 
 	/*
@@ -10211,7 +10207,7 @@
 
 
 /***/ },
-/* 14 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10465,16 +10461,16 @@
 
 
 /***/ },
-/* 15 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _interopRequireDefault = __webpack_require__(16)['default'];
+	var _interopRequireDefault = __webpack_require__(12)['default'];
 
 	exports.__esModule = true;
 
-	var _coffee_catVue = __webpack_require__(17);
+	var _coffee_catVue = __webpack_require__(13);
 
 	var _coffee_catVue2 = _interopRequireDefault(_coffee_catVue);
 
@@ -10486,7 +10482,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 16 */
+/* 12 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10500,12 +10496,12 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 17 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(18)
-	module.exports = __webpack_require__(20)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(21)
+	__webpack_require__(14)
+	module.exports = __webpack_require__(16)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(22)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10522,16 +10518,16 @@
 	}
 
 /***/ },
-/* 18 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(19);
+	var content = __webpack_require__(15);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(14)(content, {});
+	var update = __webpack_require__(10)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10548,30 +10544,30 @@
 	}
 
 /***/ },
-/* 19 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(13)();
+	exports = module.exports = __webpack_require__(9)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".coffee-cat {\n  width: 100%;\n  height: 100%;\n  position: relative;\n}\n.coffee-cat .shadow {\n  position: absolute;\n  width: calc(100% + 1.5rem);\n  height: 1.5rem;\n  background-color: black;\n  opacity: 0.3;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  bottom: -0.75rem;\n  left: 50%;\n  z-index: -2;\n}\n.coffee-cat .head {\n  position: relative;\n  height: calc(100% - 5rem);\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  padding: 3rem;\n}\n.coffee-cat .head .opening {\n  width: 100%;\n  height: 8rem;\n  background: -webkit-linear-gradient(top, #dbd9ba 0%, #dbd9ba 20%, #482a23 20%, #482a23 100%);\n  background: linear-gradient(to bottom, #dbd9ba 0%, #dbd9ba 20%, #482a23 20%, #482a23 100%);\n  margin: 0 auto;\n  position: relative;\n}\n.coffee-cat .head .nose {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  bottom: -0.75rem;\n  border-top: 6.25rem solid #f19c79;\n  border-left: 5rem solid transparent;\n  border-right: 5rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  width: 100%;\n  bottom: 7rem;\n}\n.coffee-cat .head .eyes .eye {\n  display: inline-block;\n  border-bottom: 3.75rem solid #a44a3f;\n  border-left: 3rem solid transparent;\n  border-right: 3rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes .eye:before {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 3.15rem solid #f6f4d2;\n  border-left: 2.52rem solid transparent;\n  border-right: 2.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes .eye:first-child {\n  float: left;\n  margin-left: 10rem;\n}\n.coffee-cat .head .eyes .eye:last-child {\n  float: right;\n  margin-right: 10rem;\n}\n.coffee-cat .ears {\n  position: absolute;\n  width: 100%;\n  height: 5rem;\n  bottom: -1px;\n}\n.coffee-cat .ears .ear {\n  display: inline-block;\n  border-bottom: 5rem solid #f6f4d2;\n  border-left: 4rem solid transparent;\n  border-right: 4rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .ears .ear:first-child {\n  float: left;\n  margin-left: 2rem;\n}\n.coffee-cat .ears .ear:last-child {\n  float: right;\n  margin-right: 2rem;\n}\n.coffee-cat .cheeks {\n  height: 5rem;\n}\n.coffee-cat .cheeks .cheek {\n  width: 50%;\n  height: 100%;\n  display: inline-block;\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n}\n.coffee-cat .cheeks .cheek:first-child {\n  border-bottom-right-radius: 6rem;\n}\n.coffee-cat .cheeks .cheek:last-child {\n  border-bottom-left-radius: 6rem;\n}\n.coffee-cat .handle {\n  position: absolute;\n  height: calc(100% - 4rem - 8rem - (2 * 3rem));\n  width: 17%;\n  bottom: 4rem;\n  right: calc(-17% + 0.6rem);\n}\n.coffee-cat .handle .vertical-handle {\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  height: calc(100% - 2 * 3rem + 1px);\n  position: absolute;\n  right: 0;\n  width: 3rem;\n}\n.coffee-cat .handle .horizontal-handle {\n  box-sizing: border-box;\n  width: 100%;\n  height: 3rem;\n}\n.coffee-cat .handle .horizontal-handle .flat-horizontal-handle {\n  box-sizing: border-box;\n  height: 100%;\n  width: calc(100% - 3rem + 1px);\n  background-color: #f6f4d2;\n  float: left;\n}\n.coffee-cat .handle .horizontal-handle .corner-horizontal-handle {\n  box-sizing: border-box;\n  height: 3rem;\n  width: 3rem;\n  background-color: #f6f4d2;\n  position: absolute;\n  right: 0;\n}\n.coffee-cat .handle .horizontal-handle:first-child .corner-horizontal-handle {\n  border-top-right-radius: 6rem;\n}\n.coffee-cat .handle .horizontal-handle:last-child {\n  position: absolute;\n  bottom: 0;\n}\n.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle {\n  border-bottom-right-radius: 6rem;\n}\n.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle:after {\n  top: 0;\n}\n", ""]);
+	exports.push([module.id, ".coffee-cat {\n  width: 100%;\n  height: 100%;\n  position: relative;\n}\n.coffee-cat .shadow {\n  position: absolute;\n  width: calc(100% + 1.5rem);\n  height: 1.5rem;\n  background-color: black;\n  opacity: 0.3;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  bottom: -0.75rem;\n  left: 50%;\n  z-index: -2;\n}\n.coffee-cat .head {\n  position: relative;\n  height: calc(100% - 5rem);\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  padding: 3rem;\n}\n.coffee-cat .head .opening {\n  width: 100%;\n  height: 8rem;\n  background: -webkit-linear-gradient(top, #dbd9ba 0%, #dbd9ba 20%, #482a23 20%, #482a23 100%);\n  background: linear-gradient(to bottom, #dbd9ba 0%, #dbd9ba 20%, #482a23 20%, #482a23 100%);\n  margin: 0 auto;\n  position: relative;\n}\n.coffee-cat .head .opening .vapor {\n  width: 60%;\n  position: absolute;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  bottom: 2.66666667rem;\n  opacity: 0.5;\n}\n.coffee-cat .head .nose {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  bottom: -0.75rem;\n  border-top: 6.25rem solid #f19c79;\n  border-left: 5rem solid transparent;\n  border-right: 5rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  width: 100%;\n  bottom: 7rem;\n}\n.coffee-cat .head .eyes .eye {\n  display: inline-block;\n  border-bottom: 3.75rem solid #a44a3f;\n  border-left: 3rem solid transparent;\n  border-right: 3rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes .eye:before {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 3.15rem solid #f6f4d2;\n  border-left: 2.52rem solid transparent;\n  border-right: 2.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .head .eyes .eye:first-child {\n  float: left;\n  margin-left: 10rem;\n}\n.coffee-cat .head .eyes .eye:last-child {\n  float: right;\n  margin-right: 10rem;\n}\n.coffee-cat .ears {\n  position: absolute;\n  width: 100%;\n  height: 5rem;\n  bottom: -1px;\n}\n.coffee-cat .ears .ear {\n  display: inline-block;\n  border-bottom: 5rem solid #f6f4d2;\n  border-left: 4rem solid transparent;\n  border-right: 4rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.coffee-cat .ears .ear:first-child {\n  float: left;\n  margin-left: 2rem;\n}\n.coffee-cat .ears .ear:last-child {\n  float: right;\n  margin-right: 2rem;\n}\n.coffee-cat .cheeks {\n  height: 5rem;\n}\n.coffee-cat .cheeks .cheek {\n  width: 50%;\n  height: 100%;\n  display: inline-block;\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n}\n.coffee-cat .cheeks .cheek:first-child {\n  border-bottom-right-radius: 6rem;\n}\n.coffee-cat .cheeks .cheek:last-child {\n  border-bottom-left-radius: 6rem;\n}\n.coffee-cat .handle {\n  position: absolute;\n  height: calc(100% - 4rem - 8rem - (2 * 3rem));\n  width: 17%;\n  bottom: 4rem;\n  right: calc(-17% + 0.6rem);\n}\n.coffee-cat .handle .vertical-handle {\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  height: calc(100% - 2 * 3rem + 1px);\n  position: absolute;\n  right: 0;\n  width: 3rem;\n}\n.coffee-cat .handle .horizontal-handle {\n  box-sizing: border-box;\n  width: 100%;\n  height: 3rem;\n}\n.coffee-cat .handle .horizontal-handle .flat-horizontal-handle {\n  box-sizing: border-box;\n  height: 100%;\n  width: calc(100% - 3rem + 1px);\n  background-color: #f6f4d2;\n  float: left;\n}\n.coffee-cat .handle .horizontal-handle .corner-horizontal-handle {\n  box-sizing: border-box;\n  height: 3rem;\n  width: 3rem;\n  background-color: #f6f4d2;\n  position: absolute;\n  right: 0;\n}\n.coffee-cat .handle .horizontal-handle:first-child .corner-horizontal-handle {\n  border-top-right-radius: 6rem;\n}\n.coffee-cat .handle .horizontal-handle:last-child {\n  position: absolute;\n  bottom: 0;\n}\n.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle {\n  border-bottom-right-radius: 6rem;\n}\n.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle:after {\n  top: 0;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 20 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _interopRequireDefault = __webpack_require__(16)['default'];
+	var _interopRequireDefault = __webpack_require__(12)['default'];
 
 	exports.__esModule = true;
 
-	var _vaporVue = __webpack_require__(29);
+	var _vaporVue = __webpack_require__(17);
 
 	var _vaporVue2 = _interopRequireDefault(_vaporVue);
 
@@ -10584,30 +10580,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 21 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"coffee-cat\"><div v-if=\"shadow\" class=\"shadow\"></div><div class=\"head\"><div class=\"opening\"><vapor height=\"20vh\"></vapor><div class=\"ears\"><div class=\"ear\"></div><div class=\"ear\"></div></div></div><div class=\"eyes\"><div class=\"eye\"></div><div class=\"eye\"></div></div><div class=\"nose\"></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div><div class=\"handle\"><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div><div class=\"vertical-handle\"></div><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div></div></div>";
-
-/***/ },
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */
-/***/ function(module, exports) {
-
-	module.exports = "<body><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat></div></div></body>";
-
-/***/ },
-/* 28 */,
-/* 29 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(30)
-	module.exports = __webpack_require__(32)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(33)
+	__webpack_require__(18)
+	module.exports = __webpack_require__(20)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(21)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10624,16 +10602,16 @@
 	}
 
 /***/ },
-/* 30 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(31);
+	var content = __webpack_require__(19);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(14)(content, {});
+	var update = __webpack_require__(10)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10650,21 +10628,21 @@
 	}
 
 /***/ },
-/* 31 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(13)();
+	exports = module.exports = __webpack_require__(9)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "@-webkit-keyframes vaporize {\n  0% {\n    left: 1.05183873rem;\n    opacity: 0;\n    top: 0;\n  }\n  5% {\n    opacity: 1;\n  }\n  20% {\n    left: -1.05183873rem;\n  }\n  50% {\n    left: 1.05183873rem;\n  }\n  100% {\n    font-size: 2rem;\n    left: -1.05183873rem;\n    opacity: 0;\n    top: -30rem;\n    width: 50%;\n  }\n}\n@keyframes vaporize {\n  0% {\n    left: 1.05183873rem;\n    opacity: 0;\n    top: 0;\n  }\n  5% {\n    opacity: 1;\n  }\n  20% {\n    left: -1.05183873rem;\n  }\n  50% {\n    left: 1.05183873rem;\n  }\n  100% {\n    font-size: 2rem;\n    left: -1.05183873rem;\n    opacity: 0;\n    top: -30rem;\n    width: 50%;\n  }\n}\n.vapor {\n  font-size: 3rem;\n  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  color: #a38a87;\n  text-align: center;\n  position: relative;\n  top: 3rem;\n}\n.vapor .vapor-rectangle {\n  position: absolute;\n  background-color: #917967;\n  height: 1rem;\n  width: 100%;\n  -webkit-animation: vaporize 1s;\n          animation: vaporize 1s;\n}\n", ""]);
+	exports.push([module.id, "@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n.vapor .vapor-rectangle {\n  position: absolute;\n  background-color: #917967;\n  width: 100%;\n  -webkit-animation: wobble;\n          animation: wobble;\n  -webkit-animation-fill-mode: both;\n          animation-fill-mode: both;\n  -webkit-animation-iteration-count: infinite;\n          animation-iteration-count: infinite;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 32 */
+/* 20 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10678,14 +10656,32 @@
 
 	exports['default'] = {
 		props: {
-			height: String,
+			height: String, // css property
 			duration: {
 				type: Number,
-				'default': 1000
+				'default': 1000 // ms
 			},
 			numberOfSegments: {
 				type: Number,
-				'default': 20
+				'default': 35
+			}
+		},
+
+		computed: {
+			segments: function segments() {
+				var array = new Array(this.numberOfSegments);
+				var height = 100 / this.numberOfSegments;
+				for (var i = 0; i < this.numberOfSegments; i++) {
+					var ratio = i / this.numberOfSegments;
+					array[i] = {
+						opacity: 1 - ratio,
+						animationDelay: ratio * this.duration + 'ms',
+						animationDuration: this.duration + 'ms',
+						height: height + '%',
+						bottom: i * height + '%'
+					};
+				}
+				return array;
 			}
 		},
 
@@ -10704,10 +10700,22 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 33 */
+/* 21 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"vapor\"></div>";
+	module.exports = "<div v-bind:style=\"{ height: height }\" class=\"vapor\"><div v-for=\"segmentStyle in segments\" v-bind:style=\"segmentStyle\" class=\"vapor-rectangle\"></div></div>";
+
+/***/ },
+/* 22 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"coffee-cat\"><div v-if=\"shadow\" class=\"shadow\"></div><div class=\"head\"><div class=\"opening\"><vapor height=\"20vh\"></vapor><div class=\"ears\"><div class=\"ear\"></div><div class=\"ear\"></div></div></div><div class=\"eyes\"><div class=\"eye\"></div><div class=\"eye\"></div></div><div class=\"nose\"></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div><div class=\"handle\"><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div><div class=\"vertical-handle\"></div><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div></div></div>";
+
+/***/ },
+/* 23 */
+/***/ function(module, exports) {
+
+	module.exports = "<body><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat></div></div></body>";
 
 /***/ }
 /******/ ]);

@@ -1,0 +1,13 @@
+@wobble-multiplier: 1.25rem;
+
+@keyframes wobble {
+	0% {
+		left: sin(1) * @wobble-multiplier;
+	}
+	50% {
+		left: sin(-1) * @wobble-multiplier;
+	}
+	100% {
+		left: sin(1) * @wobble-multiplier;
+	}
+}
