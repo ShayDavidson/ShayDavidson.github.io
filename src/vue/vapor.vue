@@ -20,12 +20,6 @@
 </style>
 
 <script>
-	function createVaporRectangle() {
-		let element = document.createElement('div')
-		element.className = 'vapor-rectangle'
-		return element
-	}
-
 	export default {
 		props: {
 			height: String, // css property
@@ -54,16 +48,6 @@
 					}
 				}
 				return array
-			}
-		},
-
-		methods: {
-			spawnVaporRectangle() {
-				const element = createVaporRectangle()
-				this.$el.appendChild(element)
-				element.addEventListener('animationend', () => {
-					this.$el.removeChild(element)
-				}, false)
 			}
 		}
 	}

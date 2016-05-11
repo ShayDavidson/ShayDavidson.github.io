@@ -10650,25 +10650,19 @@
 /* 20 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	exports.__esModule = true;
-	function createVaporRectangle() {
-		var element = document.createElement('div');
-		element.className = 'vapor-rectangle';
-		return element;
-	}
-
-	exports['default'] = {
+	exports["default"] = {
 		props: {
 			height: String, // css property
 			duration: {
 				type: Number,
-				'default': 1000 // ms
+				"default": 1000 // ms
 			},
 			numberOfSegments: {
 				type: Number,
-				'default': 40
+				"default": 40
 			}
 		},
 
@@ -10680,29 +10674,17 @@
 					var ratio = i / this.numberOfSegments;
 					array[i] = {
 						opacity: 1 - ratio,
-						animationDelay: ratio * this.duration + 'ms',
-						animationDuration: this.duration + 'ms',
-						height: height + '%',
-						bottom: i * height + '%'
+						animationDelay: ratio * this.duration + "ms",
+						animationDuration: this.duration + "ms",
+						height: height + "%",
+						bottom: i * height + "%"
 					};
 				}
 				return array;
 			}
-		},
-
-		methods: {
-			spawnVaporRectangle: function spawnVaporRectangle() {
-				var _this = this;
-
-				var element = createVaporRectangle();
-				this.$el.appendChild(element);
-				element.addEventListener('animationend', function () {
-					_this.$el.removeChild(element);
-				}, false);
-			}
 		}
 	};
-	module.exports = exports['default'];
+	module.exports = exports["default"];
 
 /***/ },
 /* 21 */
