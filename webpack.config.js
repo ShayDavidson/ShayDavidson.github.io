@@ -4,7 +4,7 @@ var path = require('path')
 module.exports = {
 	entry: './src/es6/index.es6',
 	output: {
-		path: path.join(__dirname, '/public'),
+		path: __dirname,
 		filename: 'index.js'
 	},
 	module: {
