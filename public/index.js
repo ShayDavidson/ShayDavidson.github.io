@@ -46,8 +46,8 @@
 
 	'use strict';
 
-	var Vue = __webpack_require__(4);
-	var App = __webpack_require__(6);
+	var Vue = __webpack_require__(10);
+	var App = __webpack_require__(12);
 
 	Vue.config.debug = true;
 	Vue.config.devtools = false;
@@ -63,7 +63,13 @@
 /* 1 */,
 /* 2 */,
 /* 3 */,
-/* 4 */
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -9989,10 +9995,10 @@
 	}, 0);
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(5)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(11)))
 
 /***/ },
-/* 5 */
+/* 11 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -10089,12 +10095,12 @@
 
 
 /***/ },
-/* 6 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(7)
-	module.exports = __webpack_require__(11)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(28)
+	__webpack_require__(13)
+	module.exports = __webpack_require__(17)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(34)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10111,16 +10117,16 @@
 	}
 
 /***/ },
-/* 7 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(8);
+	var content = __webpack_require__(14);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(10)(content, {});
+	var update = __webpack_require__(16)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10137,10 +10143,10 @@
 	}
 
 /***/ },
-/* 8 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(9)();
+	exports = module.exports = __webpack_require__(15)();
 	// imports
 
 
@@ -10151,7 +10157,7 @@
 
 
 /***/ },
-/* 9 */
+/* 15 */
 /***/ function(module, exports) {
 
 	/*
@@ -10207,7 +10213,7 @@
 
 
 /***/ },
-/* 10 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10461,20 +10467,20 @@
 
 
 /***/ },
-/* 11 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _interopRequireDefault = __webpack_require__(12)['default'];
+	var _interopRequireDefault = __webpack_require__(18)['default'];
 
 	exports.__esModule = true;
 
-	var _coffee_catVue = __webpack_require__(13);
+	var _coffee_catVue = __webpack_require__(19);
 
 	var _coffee_catVue2 = _interopRequireDefault(_coffee_catVue);
 
-	var _app_footerVue = __webpack_require__(23);
+	var _app_footerVue = __webpack_require__(29);
 
 	var _app_footerVue2 = _interopRequireDefault(_app_footerVue);
 
@@ -10487,7 +10493,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 12 */
+/* 18 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10501,12 +10507,12 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 13 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(14)
-	module.exports = __webpack_require__(16)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(22)
+	__webpack_require__(20)
+	module.exports = __webpack_require__(22)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(28)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10523,16 +10529,16 @@
 	}
 
 /***/ },
-/* 14 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(15);
+	var content = __webpack_require__(21);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(10)(content, {});
+	var update = __webpack_require__(16)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10549,10 +10555,10 @@
 	}
 
 /***/ },
-/* 15 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(9)();
+	exports = module.exports = __webpack_require__(15)();
 	// imports
 
 
@@ -10563,16 +10569,16 @@
 
 
 /***/ },
-/* 16 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _interopRequireDefault = __webpack_require__(12)['default'];
+	var _interopRequireDefault = __webpack_require__(18)['default'];
 
 	exports.__esModule = true;
 
-	var _vaporVue = __webpack_require__(17);
+	var _vaporVue = __webpack_require__(23);
 
 	var _vaporVue2 = _interopRequireDefault(_vaporVue);
 
@@ -10585,12 +10591,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 17 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(18)
-	module.exports = __webpack_require__(20)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(21)
+	__webpack_require__(24)
+	module.exports = __webpack_require__(26)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(27)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10607,16 +10613,16 @@
 	}
 
 /***/ },
-/* 18 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(19);
+	var content = __webpack_require__(25);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(10)(content, {});
+	var update = __webpack_require__(16)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10633,10 +10639,10 @@
 	}
 
 /***/ },
-/* 19 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(9)();
+	exports = module.exports = __webpack_require__(15)();
 	// imports
 
 
@@ -10647,7 +10653,7 @@
 
 
 /***/ },
-/* 20 */
+/* 26 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10687,24 +10693,24 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 21 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:style=\"{ height: height }\" class=\"vapor\"><div v-for=\"segmentStyle in segments\" v-bind:style=\"segmentStyle\" class=\"vapor-rectangle\"></div></div>";
 
 /***/ },
-/* 22 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"coffee-cat\"><div v-if=\"shadow\" class=\"shadow\"></div><div class=\"head\"><div class=\"opening\"><vapor height=\"20vh\"></vapor><div class=\"ears\"><div class=\"ear\"></div><div class=\"ear\"></div></div></div><div class=\"eyes\"><div class=\"eye\"></div><div class=\"eye\"></div></div><div class=\"nose\"></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div><div class=\"handle\"><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div><div class=\"vertical-handle\"></div><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div></div></div>";
 
 /***/ },
-/* 23 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(24)
-	module.exports = __webpack_require__(26)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(27)
+	__webpack_require__(30)
+	module.exports = __webpack_require__(32)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(33)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10721,16 +10727,16 @@
 	}
 
 /***/ },
-/* 24 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(25);
+	var content = __webpack_require__(31);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(10)(content, {});
+	var update = __webpack_require__(16)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10747,10 +10753,10 @@
 	}
 
 /***/ },
-/* 25 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(9)();
+	exports = module.exports = __webpack_require__(15)();
 	// imports
 
 
@@ -10761,7 +10767,7 @@
 
 
 /***/ },
-/* 26 */
+/* 32 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10777,13 +10783,13 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 27 */
+/* 33 */
 /***/ function(module, exports) {
 
 	module.exports = "<footer>Developed by Shay Davidson &copy; {{year}}</footer>";
 
 /***/ },
-/* 28 */
+/* 34 */
 /***/ function(module, exports) {
 
 	module.exports = "<body><div class=\"table\"></div><div class=\"container\"><div class=\"coffee-cat-container\"><coffee-cat shadow=\"shadow\"></coffee-cat></div></div><app-footer></app-footer></body>";
