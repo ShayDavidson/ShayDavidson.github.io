@@ -10153,7 +10153,7 @@
 
 
 	// module
-	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 1vw;\n}\nbody {\n  background-color: #bcddca;\n}\n.table {\n  background-color: #9b8c73;\n  height: 40%;\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.content-container {\n  height: 50vh;\n  width: 40vw;\n  min-height: 30rem;\n  min-width: 34rem;\n  position: relative;\n  box-sizing: border-box;\n}\n.content-container:first-child {\n  margin-right: 3rem;\n}\n", ""]);
+	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 1vw;\n}\nbody {\n  background-color: #bcddca;\n}\n.table {\n  background-color: #9b8c73;\n  height: 40%;\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.content-container {\n  height: 50vh;\n  width: 40vw;\n  min-height: 30rem;\n  min-width: 34rem;\n  position: relative;\n  box-sizing: border-box;\n  margin: 0 3rem;\n}\n", ""]);
 
 	// exports
 
@@ -10575,7 +10575,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".main-content {\n  color: #482a23;\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\n}\n.main-content h1 {\n  font-size: 30px;\n  margin: 0;\n  margin-bottom: 1.25rem;\n}\n.main-content p {\n  font-size: 16px;\n  margin: 0;\n  text-align: justify;\n  line-height: 24px;\n}\n.main-content p + p {\n  margin-top: 1.5rem;\n}\n", ""]);
 
 	// exports
 
@@ -10594,7 +10594,7 @@
 /* 25 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"main-content\"><p>hello my name is</p></div>";
+	module.exports = "<div class=\"main-content\"><h1>Hey, I'm Shay</h1><p>A web, mobile and game developer, a father to one daughter and two cats, a coffee lover and a synthwave fan.</p><p>Currently leading the web team at the PayPal Consumer Product Center in Tel-Aviv.</p></div>";
 
 /***/ },
 /* 26 */

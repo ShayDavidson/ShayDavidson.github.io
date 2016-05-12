@@ -54,10 +54,7 @@
 		min-width: @content-container-min-width;
 		position: relative;
 		box-sizing: border-box;
-
-		&:first-child {
-			margin-right: @content-container-margin;
-		}
+		margin: 0 @content-container-margin;
 	}
 </style>
 
