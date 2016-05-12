@@ -1,7 +1,7 @@
 <template lang='jade'>
 	.coffee-cat
-		.shadow(v-if='shadow')
 		.main
+			.shadow(v-if='shadow')
 			.head
 				.opening
 					vapor(height='20vh')
@@ -63,22 +63,26 @@
 		width: 100%;
 		height: 100%;
 		position: relative;
+		display: flex;
+  	flex-wrap: wrap;
 
 		.shadow {
 			position: absolute;
-			width: ~'calc(@{main-width} + @{shadow-extension})';
+			width: 100%;
 			height: @shadow-extension;
 			background-color: black;
 			opacity: @shadow-opacity;
 			transform: translateX(-50%);
 			bottom: -@shadow-extension / 2;
-			left: @main-width / 2;
+			left: 50%;
+			padding: 0 @shadow-extension / 2;
 		}
 
 		.main {
 			display: inline-block;
 			width: @main-width;
 			height: 100%;
+			position: relative;
 		}
 
 		.head {
@@ -188,8 +192,9 @@
 			display: inline-block;
 			position: relative;
 			height: ~'calc(100% - @{handle-position} - @{opening-height} - (2 * @{head-padding}))';
-			width: @handle-width;
 			bottom: @handle-position;
+			flex-grow: 1;
+			align-self: flex-end;
 
 			.vertical-handle {
 				box-sizing: border-box;
