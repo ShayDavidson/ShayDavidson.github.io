@@ -15,7 +15,7 @@
 	@import '~colors.less';
 
 	@table-size: 40%;
-	@content-container-height: 50vh;
+	@content-container-height: 45vh;
 	@content-container-width: 40vw;
 	@content-container-min-height: 30rem;
 	@content-container-min-width: 34rem;

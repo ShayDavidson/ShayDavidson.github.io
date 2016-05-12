@@ -1,19 +1,20 @@
 <template lang='jade'>
 	.coffee-cat
 		.shadow(v-if='shadow')
-		.head
-			.opening
-				vapor(height='20vh')
-				.ears
-					.ear
-					.ear
-			.eyes
-				.eye
-				.eye
-			.nose
-		.cheeks
-			.cheek
-			.cheek
+		.main
+			.head
+				.opening
+					vapor(height='20vh')
+					.ears
+						.ear
+						.ear
+				.eyes
+					.eye
+					.eye
+				.nose
+			.cheeks
+				.cheek
+				.cheek
 		.handle
 			.horizontal-handle
 				.flat-horizontal-handle
@@ -42,7 +43,7 @@
 		@nose-width: 5rem;
 		@nose-position-fix: -0.75rem;
 		@eye-width: 3rem;
-		@eye-padding: 10rem;
+		@eye-padding: 6rem;
 		@eye-position: 7rem;
 		@ear-width: 4rem;
 		@ear-height: @ear-width * @triangle-multiplier;
@@ -57,6 +58,7 @@
 		@shadow-extension: 1.5rem;
 		@shadow-opacity: 0.3;
 		@vapor-width: 60%;
+		@main-width: 100% - @handle-width;
 
 		width: 100%;
 		height: 100%;
@@ -64,13 +66,19 @@
 
 		.shadow {
 			position: absolute;
-			width: ~'calc(100% + @{shadow-extension})';
+			width: ~'calc(@{main-width} + @{shadow-extension})';
 			height: @shadow-extension;
 			background-color: black;
 			opacity: @shadow-opacity;
 			transform: translateX(-50%);
 			bottom: -@shadow-extension / 2;
-			left: 50%;
+			left: @main-width / 2;
+		}
+
+		.main {
+			display: inline-block;
+			width: @main-width;
+			height: 100%;
 		}
 
 		.head {
@@ -80,6 +88,7 @@
 			box-sizing: border-box;
 			background-color: @skin-color;
 			padding: @head-padding;
+			width: 100%;
 
 			.opening {
 				width: 100%;
@@ -176,11 +185,11 @@
 		}
 
 		.handle {
-			position: absolute;
+			display: inline-block;
+			position: relative;
 			height: ~'calc(100% - @{handle-position} - @{opening-height} - (2 * @{head-padding}))';
 			width: @handle-width;
 			bottom: @handle-position;
-			right: ~'calc(-@{handle-width} + @{border-width})';
 
 			.vertical-handle {
 				box-sizing: border-box;
