@@ -1,9 +1,10 @@
 <template lang='jade'>
-	.instafeed
+	.main-content
+		p hello my name is
 </template>
 
 <style lang='less'>
-	.instafeed {
+	.main-content {
 
 	}
 </style>
@@ -12,6 +13,3 @@
 	export default {
 	}
 </script>
-
-
-<!-- https://www.instagram.com/babbenlou/media/ -->

@@ -2,7 +2,9 @@
 	body
 		.table
 		.container
-			.coffee-cat-container
+			.content-container
+				main-content
+			.content-container
 				coffee-cat(shadow=true)
 		app-footer
 
@@ -13,10 +15,11 @@
 	@import '~colors.less';
 
 	@table-size: 40%;
-	@coffee-cat-height: 50vh;
-	@coffee-cat-width: 40vw;
-	@coffee-cat-min-height: 30rem;
-	@coffee-cat-min-width: 34rem;
+	@content-container-height: 50vh;
+	@content-container-width: 40vw;
+	@content-container-min-height: 30rem;
+	@content-container-min-width: 34rem;
+	@content-container-margin: 3rem;
 
 	html, body {
 		width: 100%;
@@ -44,22 +47,31 @@
 		justify-content: center;
 	}
 
-	.coffee-cat-container {
-		height: @coffee-cat-height;
-		width: @coffee-cat-width;
-		min-height: @coffee-cat-min-height;
-		min-width: @coffee-cat-min-width;
+	.content-container {
+		height: @content-container-height;
+		width: @content-container-width;
+		min-height: @content-container-min-height;
+		min-width: @content-container-min-width;
 		position: relative;
+		box-sizing: border-box;
+
+		&:first-child {
+			margin-right: @content-container-margin;
+		}
 	}
 </style>
 
 <script>
+	import MainContent from 'main_content.vue'
 	import CoffeeCat from 'coffee_cat.vue'
 	import AppFooter from 'app_footer.vue'
+	import Instafeed from 'instafeed.vue'
 
 	export default {
 		components: {
+			MainContent,
 			CoffeeCat,
+			Instafeed,
 			AppFooter
 		}
 	}
