@@ -304,6 +304,7 @@
 			.top& {
 				height: @handle-part-width;
 				bottom: 50%;
+				transform: translateY(50%);
 			}
 
 			.vertical-handle {
