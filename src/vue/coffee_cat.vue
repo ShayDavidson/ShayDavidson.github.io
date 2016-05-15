@@ -1,5 +1,10 @@
+// cheecks anomaly
+// shadow padding
+// opening color
+// handle
+
 <template lang='jade'>
-	.coffee-cat(:class="{ 'handle-in': handleIn, 'handle-out': !handleIn }")
+	.coffee-cat(:class="{ 'handle-in': handleIn, 'handle-out': !handleIn, top: top }")
 		.main
 			.shadow(v-if='shadow')
 			.head
@@ -53,12 +58,14 @@
 		@handle-height: 60%;
 		@handle-part-width: 3rem;
 		@coffee-portion: 80%;
-		@opening-portion: 20%;
+		@opening-portion: 2rem;
 		@opening-height: 8rem;
 		@shadow-extension: 1.5rem;
 		@shadow-opacity: 0.3;
 		@vapor-width: 60%;
 		@handle-in-main-width: 100% - @handle-width;
+		@transition-duration: 0.3s;
+		@transition-easing: linear;
 
 		width: 100%;
 		height: 100%;
@@ -76,6 +83,12 @@
 			bottom: -@shadow-extension / 2;
 			left: 50%;
 			padding: 0 @shadow-extension / 2;
+			transition: all @transition-duration @transition-easing;
+
+			.top& {
+				height: 100%;
+				padding: @shadow-extension / 2;
+			}
 		}
 
 		.main {
@@ -97,13 +110,36 @@
 			background-color: @skin-color;
 			padding: @head-padding;
 			width: 100%;
+			transition: height @transition-duration @transition-easing;
+
+			.top& {
+				height: 100%;
+			}
 
 			.opening {
 				width: 100%;
 				height: @opening-height;
-				background: linear-gradient(to bottom, @opening-color 0%, @opening-color @opening-portion, @coffee-color @opening-portion, @coffee-color 100%);
+				background-color: @coffee-color;
 				margin: 0 auto;
 				position: relative;
+				transition: height @transition-duration @transition-easing;
+
+				.top& {
+					height: 100%;
+				}
+
+				&:before {
+					content: '';
+					width: 100%;
+					height: @opening-portion;
+					background-color: @opening-color;
+					position: absolute;
+					transition: height @transition-duration @transition-easing;
+
+					.top& {
+						height: 0;
+					}
+				}
 
 				.vapor {
 					width: @vapor-width;
@@ -112,6 +148,14 @@
 					transform: translateX(-50%);
 					bottom: @opening-height / 3;
 					opacity: 0.5;
+					transition: opacity @transition-duration @transition-easing;
+					transition-delay: 0.75s;
+
+					.top& {
+						opacity: 0;
+						transition-delay: 0s;
+						transition-duration: @transition-duration / 2;
+					}
 				}
 			}
 
@@ -121,6 +165,11 @@
 				position: absolute;
 				bottom: @nose-position-fix;
 				.triangle-flipped(@nose-width, @border-color);
+				transition: border-top @transition-duration @transition-easing;
+
+				.top& {
+					border-top: 0 solid @border-color;
+				}
 			}
 
 			.eyes {
@@ -130,10 +179,28 @@
 				position: absolute;
 				width: 100%;
 				bottom: @eye-position;
+				transition: bottom @transition-duration @transition-easing;
+
+				.top& {
+					bottom: 0;
+				}
 
 				.eye {
 					display: inline-block;
 					.triangle-open-border(@eye-width, @border-width, @skin-color, @eye-color);
+					transition: border-bottom @transition-duration @transition-easing;
+
+					.top& {
+						border-bottom: 0 solid @eye-color;
+					}
+
+					&:before {
+						transition: border-bottom @transition-duration @transition-easing;
+
+						.top& {
+							border-bottom: 0 solid @skin-color;
+						}
+					}
 
 					&:first-child {
 						float: left;
@@ -152,11 +219,21 @@
 			position: absolute;
 			width: 100%;
 			height: @ear-height;
-			bottom: -1px; // fixes some glitches when resizing.
+			bottom: -2px; // fixes some glitches when resizing.
+			transition: height @transition-duration @transition-easing;
+
+			.top& {
+				height: 0;
+			}
 
 			.ear {
 				display: inline-block;
 				.triangle(@ear-width, @skin-color);
+				transition: border-bottom @transition-duration @transition-easing;
+
+				.top& {
+					border-bottom: 0 solid @skin-color;
+				}
 
 				&:first-child {
 					float: left;
@@ -171,9 +248,16 @@
 		}
 
 	  .cheeks {
-			height: @cheek-height;
-			position: relative;
+			height: @cheek-height * 2;
+			position: absolute;
+			width: 100%;
+			bottom: 0;
 			z-index: 1; // to be on top of shadow.
+			transition: height @transition-duration @transition-easing;
+
+			.top& {
+				height: 0;
+			}
 
 			.cheek {
 				width: 50%;
@@ -181,13 +265,22 @@
 				display: inline-block;
 				box-sizing: border-box;
 				background-color: @skin-color;
+				transition: border-radius @transition-duration @transition-easing;
 
 				&:first-child {
 					border-bottom-right-radius: @border-radius;
+
+					.top& {
+						border-bottom-right-radius: 0;
+					}
 				}
 
 				&:last-child {
 					border-bottom-left-radius: @border-radius;
+
+					.top& {
+						border-bottom-left-radius: 0;
+					}
 				}
 			}
 		}
@@ -200,11 +293,19 @@
 			bottom: @handle-position;
 			flex-grow: 1;
 			align-self: flex-end;
+			transition: height @transition-duration @transition-easing;
+			transition: all @transition-duration @transition-easing;
 
 			.handle-out& {
 				position: absolute;
 				width: 100% - @handle-in-main-width;
 			}
+
+			// .top& {
+			// 	height: @handle-part-width;
+			// 	bottom: 50%;
+			// 	transform: translateY(50%);
+			// }
 
 			.vertical-handle {
 				box-sizing: border-box;
@@ -264,7 +365,7 @@
 	import Vapor from 'vapor.vue'
 
 	export default {
-		props: ['shadow', 'handleIn'],
+		props: ['shadow', 'handleIn', 'top'],
 		components: {
 			Vapor
 		}

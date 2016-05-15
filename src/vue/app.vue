@@ -1,11 +1,11 @@
 <template lang="jade">
 	body
-		.table
+		//- .table
 		.container
 			//- .content-container
 			//- 	main-content
 			.content-container
-				coffee-cat(shadow=true, handle-in=false)
+				coffee-cat(shadow=true, handle-in=false, top=true)
 		app-footer
 
 </template>
