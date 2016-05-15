@@ -148,7 +148,7 @@
 					transform: translateX(-50%);
 					bottom: @opening-height / 3;
 					opacity: 0.5;
-					transition: opacity @transition-duration @transition-easing;
+					transition: opacity @transition-duration * 2 @transition-easing;
 					transition-delay: 0.75s;
 
 					.top& {
@@ -301,11 +301,10 @@
 				width: 100% - @handle-in-main-width;
 			}
 
-			// .top& {
-			// 	height: @handle-part-width;
-			// 	bottom: 50%;
-			// 	transform: translateY(50%);
-			// }
+			.top& {
+				height: @handle-part-width;
+				bottom: 50%;
+			}
 
 			.vertical-handle {
 				box-sizing: border-box;
@@ -341,6 +340,11 @@
 				&:first-child {
 					.corner-horizontal-handle {
 						border-top-right-radius: @border-radius;
+						transition: border-top-right-radius @transition-duration @transition-easing;
+
+						.top& {
+							border-top-right-radius: 0;
+						}
 					}
 				}
 
@@ -350,6 +354,11 @@
 
 					.corner-horizontal-handle {
 						border-bottom-right-radius: @border-radius;
+						transition: border-bottom-right-radius @transition-duration @transition-easing;
+
+						.top& {
+							border-bottom-right-radius: 0;
+						}
 
 						&:after {
 							top: 0;
