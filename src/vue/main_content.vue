@@ -14,16 +14,15 @@
 		font-family: @font-family-base;
 
 		h1 {
-			font-size: @font-size-fluid-header;
+			font-size: @font-size-static-header;
 			margin: 0;
 			margin-bottom: 1.25rem;
 		}
 
 		p {
-			font-size: @font-size-fluid-normal;
+			font-size: @font-size-static-normal;
 			margin: 0;
 			text-align: justify;
-			line-height: @font-size-fluid-normal * 1.5;
 
 			+ p {
 				margin-top: 1.5rem;

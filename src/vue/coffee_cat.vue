@@ -1,5 +1,5 @@
 <template lang='jade'>
-	.coffee-cat
+	.coffee-cat(:class="{ 'handle-in': handleIn, 'handle-out': !handleIn }")
 		.main
 			.shadow(v-if='shadow')
 			.head
@@ -58,7 +58,7 @@
 		@shadow-extension: 1.5rem;
 		@shadow-opacity: 0.3;
 		@vapor-width: 60%;
-		@main-width: 100% - @handle-width;
+		@handle-in-main-width: 100% - @handle-width;
 
 		width: 100%;
 		height: 100%;
@@ -80,9 +80,13 @@
 
 		.main {
 			display: inline-block;
-			width: @main-width;
+			width: 100%;
 			height: 100%;
 			position: relative;
+
+			.handle-in& {
+				width: @handle-in-main-width;
+			}
 		}
 
 		.head {
@@ -190,11 +194,17 @@
 
 		.handle {
 			display: inline-block;
+			width: auto;
 			position: relative;
 			height: ~'calc(100% - @{handle-position} - @{opening-height} - (2 * @{head-padding}))';
 			bottom: @handle-position;
 			flex-grow: 1;
 			align-self: flex-end;
+
+			.handle-out& {
+				position: absolute;
+				width: 100% - @handle-in-main-width;
+			}
 
 			.vertical-handle {
 				box-sizing: border-box;
@@ -254,7 +264,7 @@
 	import Vapor from 'vapor.vue'
 
 	export default {
-		props: ['shadow'],
+		props: ['shadow', 'handleIn'],
 		components: {
 			Vapor
 		}
