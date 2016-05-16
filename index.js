@@ -46,8 +46,8 @@
 
 	'use strict';
 
-	var Vue = __webpack_require__(12);
-	var App = __webpack_require__(14);
+	var Vue = __webpack_require__(5);
+	var App = __webpack_require__(7);
 
 	Vue.config.debug = true;
 	Vue.config.devtools = false;
@@ -64,14 +64,7 @@
 /* 2 */,
 /* 3 */,
 /* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -9997,10 +9990,10 @@
 	}, 0);
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(13)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(6)))
 
 /***/ },
-/* 13 */
+/* 6 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -10097,12 +10090,12 @@
 
 
 /***/ },
-/* 14 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(15)
-	module.exports = __webpack_require__(19)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(46)
+	__webpack_require__(8)
+	module.exports = __webpack_require__(12)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(44)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10119,16 +10112,16 @@
 	}
 
 /***/ },
-/* 15 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(16);
+	var content = __webpack_require__(9);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10145,21 +10138,21 @@
 	}
 
 /***/ },
-/* 16 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(17)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 1vw;\n}\nbody {\n  background-color: #bcddca;\n}\n.table {\n  background-color: #9b8c73;\n  height: 40%;\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n}\n.content-container {\n  height: 45vmin;\n  width: 40vw;\n  min-height: 30rem;\n  min-width: 34rem;\n  position: relative;\n  box-sizing: border-box;\n  margin: 0 3rem;\n}\n", ""]);
+	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\n@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 1vw;\n}\nbody {\n  background-color: #bcddca;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: absolute;\n}\n.content-container {\n  height: 40vw;\n  width: 40vw;\n  min-height: 40rem;\n  min-width: 40rem;\n  position: relative;\n  box-sizing: border-box;\n  margin: 0 3rem;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 17 */
+/* 10 */
 /***/ function(module, exports) {
 
 	/*
@@ -10215,7 +10208,7 @@
 
 
 /***/ },
-/* 18 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10469,43 +10462,62 @@
 
 
 /***/ },
-/* 19 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _interopRequireDefault = __webpack_require__(20)['default'];
+	var _interopRequireDefault = __webpack_require__(13)['default'];
 
 	exports.__esModule = true;
 
-	var _main_contentVue = __webpack_require__(21);
+	var _main_contentVue = __webpack_require__(14);
 
 	var _main_contentVue2 = _interopRequireDefault(_main_contentVue);
 
-	var _coffee_catVue = __webpack_require__(26);
+	var _coffee_catVue = __webpack_require__(19);
 
 	var _coffee_catVue2 = _interopRequireDefault(_coffee_catVue);
 
-	var _app_footerVue = __webpack_require__(36);
+	var _app_footerVue = __webpack_require__(29);
 
 	var _app_footerVue2 = _interopRequireDefault(_app_footerVue);
 
-	var _instafeedVue = __webpack_require__(41);
+	var _instafeedVue = __webpack_require__(34);
 
 	var _instafeedVue2 = _interopRequireDefault(_instafeedVue);
+
+	var _table_standVue = __webpack_require__(39);
+
+	var _table_standVue2 = _interopRequireDefault(_table_standVue);
 
 	exports['default'] = {
 		components: {
 			MainContent: _main_contentVue2['default'],
 			CoffeeCat: _coffee_catVue2['default'],
 			Instafeed: _instafeedVue2['default'],
+			TableStand: _table_standVue2['default'],
 			AppFooter: _app_footerVue2['default']
+		},
+
+		data: function data() {
+			return {
+				top: true
+			};
+		},
+
+		created: function created() {
+			var _this = this;
+
+			window.toggle = function () {
+				_this.top = !_this.top;
+			};
 		}
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 20 */
+/* 13 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10519,12 +10531,12 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 21 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(22)
-	module.exports = __webpack_require__(24)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(25)
+	__webpack_require__(15)
+	module.exports = __webpack_require__(17)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(18)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10541,16 +10553,16 @@
 	}
 
 /***/ },
-/* 22 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(23);
+	var content = __webpack_require__(16);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10567,10 +10579,10 @@
 	}
 
 /***/ },
-/* 23 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(17)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
@@ -10581,7 +10593,7 @@
 
 
 /***/ },
-/* 24 */
+/* 17 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10591,18 +10603,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 25 */
+/* 18 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"main-content\"><h1>Hey, I'm Shay</h1><p>A web, mobile and game developer, a father to one daughter and two cats, a coffee lover and a synthwave fan.</p><p>Currently leading the web team at the PayPal Consumer Product Center in Tel-Aviv.</p></div>";
 
 /***/ },
-/* 26 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(27)
-	module.exports = __webpack_require__(29)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(35)
+	__webpack_require__(20)
+	module.exports = __webpack_require__(22)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(28)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10619,16 +10631,16 @@
 	}
 
 /***/ },
-/* 27 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(28);
+	var content = __webpack_require__(21);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10645,30 +10657,30 @@
 	}
 
 /***/ },
-/* 28 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(17)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".coffee-cat {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-wrap: wrap;\n      -ms-flex-wrap: wrap;\n          flex-wrap: wrap;\n}\n.coffee-cat .shadow {\n  position: absolute;\n  width: 100%;\n  height: 1.5rem;\n  background-color: black;\n  opacity: 0.3;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  bottom: -0.75rem;\n  left: 50%;\n  padding: 0 0.75rem;\n  -webkit-transition: all 0.3s linear;\n  transition: all 0.3s linear;\n}\n.top.coffee-cat .shadow {\n  height: 100%;\n  padding: 0.75rem;\n}\n.coffee-cat .main {\n  display: inline-block;\n  width: 100%;\n  height: 100%;\n  position: relative;\n}\n.handle-in.coffee-cat .main {\n  width: 83%;\n}\n.coffee-cat .head {\n  position: relative;\n  z-index: 2;\n  height: calc(100% - 5rem);\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  padding: 3rem;\n  width: 100%;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .head {\n  height: 100%;\n}\n.coffee-cat .head .opening {\n  width: 100%;\n  height: 8rem;\n  background-color: #482a23;\n  margin: 0 auto;\n  position: relative;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .head .opening {\n  height: 100%;\n}\n.coffee-cat .head .opening:before {\n  content: '';\n  width: 100%;\n  height: 2rem;\n  background-color: #dbd9ba;\n  position: absolute;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .head .opening:before {\n  height: 0;\n}\n.coffee-cat .head .opening .vapor {\n  width: 60%;\n  position: absolute;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  bottom: 2.66666667rem;\n  opacity: 0.5;\n  -webkit-transition: opacity 0.6s linear;\n  transition: opacity 0.6s linear;\n  -webkit-transition-delay: 0.75s;\n          transition-delay: 0.75s;\n}\n.top.coffee-cat .head .opening .vapor {\n  opacity: 0;\n  -webkit-transition-delay: 0s;\n          transition-delay: 0s;\n  -webkit-transition-duration: 0.15s;\n          transition-duration: 0.15s;\n}\n.coffee-cat .head .nose {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  bottom: -0.75rem;\n  border-top: 6.25rem solid #f19c79;\n  border-left: 5rem solid transparent;\n  border-right: 5rem solid transparent;\n  height: 0px;\n  width: 0px;\n  -webkit-transition: border-top 0.3s linear;\n  transition: border-top 0.3s linear;\n}\n.top.coffee-cat .head .nose {\n  border-top: 0 solid #f19c79;\n}\n.coffee-cat .head .eyes {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  width: 100%;\n  bottom: 7rem;\n  -webkit-transition: bottom 0.3s linear;\n  transition: bottom 0.3s linear;\n}\n.top.coffee-cat .head .eyes {\n  bottom: 0;\n}\n.coffee-cat .head .eyes .eye {\n  display: inline-block;\n  border-bottom: 3.75rem solid #a44a3f;\n  border-left: 3rem solid transparent;\n  border-right: 3rem solid transparent;\n  height: 0px;\n  width: 0px;\n  -webkit-transition: border-bottom 0.3s linear;\n  transition: border-bottom 0.3s linear;\n}\n.coffee-cat .head .eyes .eye:before {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 3.15rem solid #f6f4d2;\n  border-left: 2.52rem solid transparent;\n  border-right: 2.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.top.coffee-cat .head .eyes .eye {\n  border-bottom: 0 solid #a44a3f;\n}\n.coffee-cat .head .eyes .eye:before {\n  -webkit-transition: border-bottom 0.3s linear;\n  transition: border-bottom 0.3s linear;\n}\n.top.coffee-cat .head .eyes .eye:before {\n  border-bottom: 0 solid #f6f4d2;\n}\n.coffee-cat .head .eyes .eye:first-child {\n  float: left;\n  margin-left: 6rem;\n}\n.coffee-cat .head .eyes .eye:last-child {\n  float: right;\n  margin-right: 6rem;\n}\n.coffee-cat .ears {\n  position: absolute;\n  width: 100%;\n  height: 5rem;\n  bottom: -2px;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .ears {\n  height: 0;\n}\n.coffee-cat .ears .ear {\n  display: inline-block;\n  border-bottom: 5rem solid #f6f4d2;\n  border-left: 4rem solid transparent;\n  border-right: 4rem solid transparent;\n  height: 0px;\n  width: 0px;\n  -webkit-transition: border-bottom 0.3s linear;\n  transition: border-bottom 0.3s linear;\n}\n.top.coffee-cat .ears .ear {\n  border-bottom: 0 solid #f6f4d2;\n}\n.coffee-cat .ears .ear:first-child {\n  float: left;\n  margin-left: 2rem;\n}\n.coffee-cat .ears .ear:last-child {\n  float: right;\n  margin-right: 2rem;\n}\n.coffee-cat .cheeks {\n  height: 10rem;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  z-index: 1;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .cheeks {\n  height: 0;\n}\n.coffee-cat .cheeks .cheek {\n  width: 50%;\n  height: 100%;\n  display: inline-block;\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  -webkit-transition: border-radius 0.3s linear;\n  transition: border-radius 0.3s linear;\n}\n.coffee-cat .cheeks .cheek:first-child {\n  border-bottom-right-radius: 6rem;\n}\n.top.coffee-cat .cheeks .cheek:first-child {\n  border-bottom-right-radius: 0;\n}\n.coffee-cat .cheeks .cheek:last-child {\n  border-bottom-left-radius: 6rem;\n}\n.top.coffee-cat .cheeks .cheek:last-child {\n  border-bottom-left-radius: 0;\n}\n.coffee-cat .handle {\n  display: inline-block;\n  width: auto;\n  position: relative;\n  height: calc(100% - 4rem - 8rem - (2 * 3rem));\n  bottom: 4rem;\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -webkit-align-self: flex-end;\n      -ms-flex-item-align: end;\n          align-self: flex-end;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n  -webkit-transition: all 0.3s linear;\n  transition: all 0.3s linear;\n}\n.handle-out.coffee-cat .handle {\n  position: absolute;\n  width: 17%;\n}\n.top.coffee-cat .handle {\n  height: 3rem;\n  bottom: 50%;\n  -webkit-transform: translateY(50%);\n          transform: translateY(50%);\n}\n.coffee-cat .handle .vertical-handle {\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  height: calc(100% - 2 * 3rem + 1px);\n  position: absolute;\n  right: 0;\n  width: 3rem;\n}\n.coffee-cat .handle .horizontal-handle {\n  box-sizing: border-box;\n  width: 100%;\n  height: 3rem;\n}\n.coffee-cat .handle .horizontal-handle .flat-horizontal-handle {\n  box-sizing: border-box;\n  height: 100%;\n  width: calc(100% - 3rem + 1px);\n  background-color: #f6f4d2;\n  float: left;\n}\n.coffee-cat .handle .horizontal-handle .corner-horizontal-handle {\n  box-sizing: border-box;\n  height: 3rem;\n  width: 3rem;\n  background-color: #f6f4d2;\n  position: absolute;\n  right: 0;\n}\n.coffee-cat .handle .horizontal-handle:first-child .corner-horizontal-handle {\n  border-top-right-radius: 6rem;\n  -webkit-transition: border-top-right-radius 0.3s linear;\n  transition: border-top-right-radius 0.3s linear;\n}\n.top.coffee-cat .handle .horizontal-handle:first-child .corner-horizontal-handle {\n  border-top-right-radius: 0;\n}\n.coffee-cat .handle .horizontal-handle:last-child {\n  position: absolute;\n  bottom: 0;\n}\n.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle {\n  border-bottom-right-radius: 6rem;\n  -webkit-transition: border-bottom-right-radius 0.3s linear;\n  transition: border-bottom-right-radius 0.3s linear;\n}\n.top.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle {\n  border-bottom-right-radius: 0;\n}\n.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle:after {\n  top: 0;\n}\n", ""]);
+	exports.push([module.id, "@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n.coffee-cat {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-flex-wrap: wrap;\n      -ms-flex-wrap: wrap;\n          flex-wrap: wrap;\n}\n.coffee-cat .shadow {\n  position: absolute;\n  width: 100%;\n  height: 1.5rem;\n  background-color: black;\n  opacity: 0.3;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  bottom: -0.75rem;\n  left: 50%;\n  padding: 0 0.75rem;\n  -webkit-transition: all 0.3s linear;\n  transition: all 0.3s linear;\n}\n.top.coffee-cat .shadow {\n  height: 100%;\n  padding: 0.75rem;\n}\n.coffee-cat .main {\n  display: inline-block;\n  width: 100%;\n  height: 100%;\n  position: relative;\n}\n.handle-in.coffee-cat .main {\n  width: 83%;\n}\n.coffee-cat .head {\n  position: relative;\n  z-index: 2;\n  height: calc(100% - 5rem);\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  padding: 3rem;\n  width: 100%;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .head {\n  height: 100%;\n}\n.coffee-cat .head .opening {\n  width: 100%;\n  height: 8rem;\n  background-color: #482a23;\n  margin: 0 auto;\n  position: relative;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .head .opening {\n  height: 100%;\n}\n.coffee-cat .head .opening:before {\n  content: '';\n  width: 100%;\n  height: 2rem;\n  background-color: #dbd9ba;\n  position: absolute;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .head .opening:before {\n  height: 0;\n}\n.coffee-cat .head .opening .vapor {\n  width: 60%;\n  position: absolute;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  bottom: 2.66666667rem;\n  opacity: 0.5;\n  -webkit-transition: opacity 0.6s linear;\n  transition: opacity 0.6s linear;\n  -webkit-transition-delay: 0.2s;\n          transition-delay: 0.2s;\n}\n.top.coffee-cat .head .opening .vapor {\n  opacity: 0;\n  -webkit-transition-delay: 0s;\n          transition-delay: 0s;\n  -webkit-transition-duration: 0.15s;\n          transition-duration: 0.15s;\n}\n.coffee-cat .head .nose {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  bottom: -0.75rem;\n  border-top: 6.25rem solid #f19c79;\n  border-left: 5rem solid transparent;\n  border-right: 5rem solid transparent;\n  height: 0px;\n  width: 0px;\n  -webkit-transition: border-top 0.3s linear;\n  transition: border-top 0.3s linear;\n}\n.top.coffee-cat .head .nose {\n  border-top: 0 solid #f19c79;\n}\n.coffee-cat .head .eyes {\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  position: absolute;\n  width: 100%;\n  bottom: 7rem;\n  -webkit-transition: bottom 0.3s linear;\n  transition: bottom 0.3s linear;\n}\n.top.coffee-cat .head .eyes {\n  bottom: 0;\n}\n.coffee-cat .head .eyes .eye {\n  display: inline-block;\n  border-bottom: 3.75rem solid #a44a3f;\n  border-left: 3rem solid transparent;\n  border-right: 3rem solid transparent;\n  height: 0px;\n  width: 0px;\n  -webkit-transition: border-bottom 0.3s linear;\n  transition: border-bottom 0.3s linear;\n}\n.coffee-cat .head .eyes .eye:before {\n  content: '';\n  display: inline-block;\n  margin-top: 0.75rem;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  border-bottom: 3.15rem solid #f6f4d2;\n  border-left: 2.52rem solid transparent;\n  border-right: 2.52rem solid transparent;\n  height: 0px;\n  width: 0px;\n}\n.top.coffee-cat .head .eyes .eye {\n  border-bottom: 0 solid #a44a3f;\n}\n.coffee-cat .head .eyes .eye:before {\n  -webkit-transition: border-bottom 0.3s linear;\n  transition: border-bottom 0.3s linear;\n}\n.top.coffee-cat .head .eyes .eye:before {\n  border-bottom: 0 solid #f6f4d2;\n}\n.coffee-cat .head .eyes .eye:first-child {\n  float: left;\n  margin-left: 6rem;\n}\n.coffee-cat .head .eyes .eye:last-child {\n  float: right;\n  margin-right: 6rem;\n}\n.coffee-cat .ears {\n  position: absolute;\n  width: 100%;\n  height: 5rem;\n  bottom: -2px;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .ears {\n  height: 0;\n}\n.coffee-cat .ears .ear {\n  display: inline-block;\n  border-bottom: 5rem solid #f6f4d2;\n  border-left: 4rem solid transparent;\n  border-right: 4rem solid transparent;\n  height: 0px;\n  width: 0px;\n  -webkit-transition: border-bottom 0.3s linear;\n  transition: border-bottom 0.3s linear;\n}\n.top.coffee-cat .ears .ear {\n  border-bottom: 0 solid #f6f4d2;\n}\n.coffee-cat .ears .ear:first-child {\n  float: left;\n  margin-left: 2rem;\n}\n.coffee-cat .ears .ear:last-child {\n  float: right;\n  margin-right: 2rem;\n}\n.coffee-cat .cheeks {\n  height: 10rem;\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  z-index: 1;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.top.coffee-cat .cheeks {\n  height: 0;\n}\n.coffee-cat .cheeks .cheek {\n  width: 50%;\n  height: 100%;\n  display: inline-block;\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  -webkit-transition: border-radius 0.3s linear;\n  transition: border-radius 0.3s linear;\n}\n.coffee-cat .cheeks .cheek:first-child {\n  border-bottom-right-radius: 6rem;\n}\n.top.coffee-cat .cheeks .cheek:first-child {\n  border-bottom-right-radius: 0;\n}\n.coffee-cat .cheeks .cheek:last-child {\n  border-bottom-left-radius: 6rem;\n}\n.top.coffee-cat .cheeks .cheek:last-child {\n  border-bottom-left-radius: 0;\n}\n.coffee-cat .handle {\n  display: inline-block;\n  width: auto;\n  position: relative;\n  height: calc(100% - 4rem - 8rem - (2 * 3rem));\n  bottom: 4rem;\n  -webkit-box-flex: 1;\n  -webkit-flex-grow: 1;\n      -ms-flex-positive: 1;\n          flex-grow: 1;\n  -webkit-align-self: flex-end;\n      -ms-flex-item-align: end;\n          align-self: flex-end;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n  -webkit-transition: all 0.3s linear;\n  transition: all 0.3s linear;\n}\n.handle-out.coffee-cat .handle {\n  position: absolute;\n  width: 17%;\n}\n.top.coffee-cat .handle {\n  height: 3rem;\n  bottom: 50%;\n  -webkit-transform: translateY(50%);\n          transform: translateY(50%);\n}\n.coffee-cat .handle .vertical-handle {\n  box-sizing: border-box;\n  background-color: #f6f4d2;\n  height: calc(100% - 2 * 3rem + 1px);\n  position: absolute;\n  right: 0;\n  width: 3rem;\n}\n.coffee-cat .handle .horizontal-handle {\n  box-sizing: border-box;\n  width: 100%;\n  height: 3rem;\n}\n.coffee-cat .handle .horizontal-handle .flat-horizontal-handle {\n  box-sizing: border-box;\n  height: 100%;\n  width: calc(100% - 3rem + 1px);\n  background-color: #f6f4d2;\n  float: left;\n}\n.coffee-cat .handle .horizontal-handle .corner-horizontal-handle {\n  box-sizing: border-box;\n  height: 3rem;\n  width: 3rem;\n  background-color: #f6f4d2;\n  position: absolute;\n  right: 0;\n}\n.coffee-cat .handle .horizontal-handle:first-child .corner-horizontal-handle {\n  border-top-right-radius: 6rem;\n  -webkit-transition: border-top-right-radius 0.3s linear;\n  transition: border-top-right-radius 0.3s linear;\n}\n.top.coffee-cat .handle .horizontal-handle:first-child .corner-horizontal-handle {\n  border-top-right-radius: 0;\n}\n.coffee-cat .handle .horizontal-handle:last-child {\n  position: absolute;\n  bottom: 0;\n}\n.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle {\n  border-bottom-right-radius: 6rem;\n  -webkit-transition: border-bottom-right-radius 0.3s linear;\n  transition: border-bottom-right-radius 0.3s linear;\n}\n.top.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle {\n  border-bottom-right-radius: 0;\n}\n.coffee-cat .handle .horizontal-handle:last-child .corner-horizontal-handle:after {\n  top: 0;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 29 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _interopRequireDefault = __webpack_require__(20)['default'];
+	var _interopRequireDefault = __webpack_require__(13)['default'];
 
 	exports.__esModule = true;
 
-	var _vaporVue = __webpack_require__(30);
+	var _vaporVue = __webpack_require__(23);
 
 	var _vaporVue2 = _interopRequireDefault(_vaporVue);
 
@@ -10681,12 +10693,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 30 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(31)
-	module.exports = __webpack_require__(33)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(34)
+	__webpack_require__(24)
+	module.exports = __webpack_require__(26)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(27)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10703,16 +10715,16 @@
 	}
 
 /***/ },
-/* 31 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(32);
+	var content = __webpack_require__(25);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10729,10 +10741,10 @@
 	}
 
 /***/ },
-/* 32 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(17)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
@@ -10743,7 +10755,7 @@
 
 
 /***/ },
-/* 33 */
+/* 26 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10783,24 +10795,24 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 34 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:style=\"{ height: height }\" class=\"vapor\"><div v-for=\"segmentStyle in segments\" v-bind:style=\"segmentStyle\" class=\"vapor-rectangle\"></div></div>";
 
 /***/ },
-/* 35 */
+/* 28 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"{ 'handle-in': handleIn, 'handle-out': !handleIn, top: top }\" class=\"coffee-cat\"><div class=\"main\"><div v-if=\"shadow\" class=\"shadow\"></div><div class=\"head\"><div class=\"opening\"><vapor height=\"20vh\"></vapor><div class=\"ears\"><div class=\"ear\"></div><div class=\"ear\"></div></div></div><div class=\"eyes\"><div class=\"eye\"></div><div class=\"eye\"></div></div><div class=\"nose\"></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div></div><div class=\"handle\"><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div><div class=\"vertical-handle\"></div><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div></div></div>";
 
 /***/ },
-/* 36 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(37)
-	module.exports = __webpack_require__(39)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(40)
+	__webpack_require__(30)
+	module.exports = __webpack_require__(32)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(33)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10817,16 +10829,16 @@
 	}
 
 /***/ },
-/* 37 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(38);
+	var content = __webpack_require__(31);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10843,10 +10855,10 @@
 	}
 
 /***/ },
-/* 38 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(17)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
@@ -10857,7 +10869,7 @@
 
 
 /***/ },
-/* 39 */
+/* 32 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10873,18 +10885,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 40 */
+/* 33 */
 /***/ function(module, exports) {
 
 	module.exports = "<footer>Developed by Shay Davidson &copy; {{year}}</footer>";
 
 /***/ },
-/* 41 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(42)
-	module.exports = __webpack_require__(44)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(45)
+	__webpack_require__(35)
+	module.exports = __webpack_require__(37)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(38)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10901,16 +10913,16 @@
 	}
 
 /***/ },
-/* 42 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(43);
+	var content = __webpack_require__(36);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(18)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10927,10 +10939,10 @@
 	}
 
 /***/ },
-/* 43 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(17)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
@@ -10941,7 +10953,7 @@
 
 
 /***/ },
-/* 44 */
+/* 37 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10951,16 +10963,96 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 45 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"instafeed\"></div>";
 
 /***/ },
-/* 46 */
+/* 39 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(40)
+	module.exports = __webpack_require__(42)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(43)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./table_stand.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./table_stand.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./table_stand.vue"], function () {
+	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./table_stand.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./table_stand.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 40 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(41);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(11)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8a0f7a7e&file=table_stand.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./table_stand.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8a0f7a7e&file=table_stand.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./table_stand.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(10)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n.table-stand {\n  background-color: #9b8c73;\n  height: 0;\n  position: absolute;\n  width: 100%;\n  padding: 5rem;\n  padding-bottom: 10rem;\n  bottom: -10rem;\n  left: -5rem;\n  -webkit-transition: all 0.3s linear;\n  transition: all 0.3s linear;\n}\n.table-stand.top {\n  height: 100%;\n  padding-bottom: 5rem;\n  bottom: -5rem;\n}\n.table-stand .table-front {\n  width: 100%;\n  height: 5rem;\n  background-color: #7a6d57;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n  left: 0;\n  bottom: 0;\n  position: absolute;\n}\n.top.table-stand .table-front {\n  height: 0;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 42 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div class=\"container\"><div class=\"content-container\"><coffee-cat shadow=\"shadow\" top=\"top\"></coffee-cat></div></div><app-footer></app-footer></body>";
+	'use strict';
+
+	exports.__esModule = true;
+	exports['default'] = {
+			props: ['top']
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	module.exports = "<div :class=\"{ top: top }\" class=\"table-stand\"><div class=\"table-front\"></div></div>";
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	module.exports = "<body><div class=\"container\"><div class=\"content-container\"><table-stand :top=\"top\"></table-stand></div></div><div class=\"container\"><div class=\"content-container\"><coffee-cat :top=\"top\" shadow=\"shadow\"></coffee-cat></div></div><app-footer></app-footer></body>";
 
 /***/ }
 /******/ ]);

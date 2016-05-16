@@ -1,11 +1,13 @@
 <template lang="jade">
 	body
-		//- .table
+		.container
+			.content-container
+				table-stand(:top='top')
 		.container
 			//- .content-container
 			//- 	main-content
 			.content-container
-				coffee-cat(shadow=true, handle-in=false, top=true)
+				coffee-cat(:top='top', shadow=true, handle-in=false)
 		app-footer
 
 </template>
@@ -13,12 +15,12 @@
 <style lang="less">
 	@import "~reset.less";
 	@import '~colors.less';
+	@import '~animations.less';
 
-	@table-size: 40%;
-	@content-container-height: 45vmin;
+	@content-container-height: 40vw;
 	@content-container-width: 40vw;
-	@content-container-min-height: 30rem;
-	@content-container-min-width: 34rem;
+	@content-container-min-height: 40rem;
+	@content-container-min-width: 40rem;
 	@content-container-margin: 3rem;
 
 	html, body {
@@ -31,20 +33,13 @@
 		background-color: @color-blue;
 	}
 
-	.table {
-		background-color: @color-wood;
-		height: 40%;
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-	}
-
 	.container {
 		width: 100%;
 		height: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: absolute;
 	}
 
 	.content-container {
@@ -63,13 +58,27 @@
 	import CoffeeCat from 'coffee_cat.vue'
 	import AppFooter from 'app_footer.vue'
 	import Instafeed from 'instafeed.vue'
+	import TableStand from 'table_stand.vue'
 
 	export default {
 		components: {
 			MainContent,
 			CoffeeCat,
 			Instafeed,
+			TableStand,
 			AppFooter
+		},
+
+		data() {
+			return {
+				top: true
+			}
+		},
+
+		created() {
+			window.toggle = () => {
+				this.top = !this.top
+			}
 		}
 	}
 </script>

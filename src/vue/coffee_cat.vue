@@ -1,8 +1,3 @@
-// cheecks anomaly
-// shadow padding
-// opening color
-// handle
-
 <template lang='jade'>
 	.coffee-cat(:class="{ 'handle-in': handleIn, 'handle-out': !handleIn, top: top }")
 		.main
@@ -33,6 +28,7 @@
 <style lang='less'>
 	@import '~triangles.less';
 	@import '~colors.less';
+	@import '~animations.less';
 
 	.coffee-cat {
 		@border-color: @color-orange;
@@ -64,8 +60,6 @@
 		@shadow-opacity: 0.3;
 		@vapor-width: 60%;
 		@handle-in-main-width: 100% - @handle-width;
-		@transition-duration: 0.3s;
-		@transition-easing: linear;
 
 		width: 100%;
 		height: 100%;
@@ -83,7 +77,7 @@
 			bottom: -@shadow-extension / 2;
 			left: 50%;
 			padding: 0 @shadow-extension / 2;
-			transition: all @transition-duration @transition-easing;
+			transition: all @transition-top-duration @transition-top-easing;
 
 			.top& {
 				height: 100%;
@@ -110,7 +104,7 @@
 			background-color: @skin-color;
 			padding: @head-padding;
 			width: 100%;
-			transition: height @transition-duration @transition-easing;
+			transition: height @transition-top-duration @transition-top-easing;
 
 			.top& {
 				height: 100%;
@@ -122,7 +116,7 @@
 				background-color: @coffee-color;
 				margin: 0 auto;
 				position: relative;
-				transition: height @transition-duration @transition-easing;
+				transition: height @transition-top-duration @transition-top-easing;
 
 				.top& {
 					height: 100%;
@@ -134,7 +128,7 @@
 					height: @opening-portion;
 					background-color: @opening-color;
 					position: absolute;
-					transition: height @transition-duration @transition-easing;
+					transition: height @transition-top-duration @transition-top-easing;
 
 					.top& {
 						height: 0;
@@ -148,13 +142,13 @@
 					transform: translateX(-50%);
 					bottom: @opening-height / 3;
 					opacity: 0.5;
-					transition: opacity @transition-duration * 2 @transition-easing;
-					transition-delay: 0.75s;
+					transition: opacity @transition-top-duration * 2 @transition-top-easing;
+					transition-delay: 0.2s;
 
 					.top& {
 						opacity: 0;
 						transition-delay: 0s;
-						transition-duration: @transition-duration / 2;
+						transition-duration: @transition-top-duration / 2;
 					}
 				}
 			}
@@ -165,7 +159,7 @@
 				position: absolute;
 				bottom: @nose-position-fix;
 				.triangle-flipped(@nose-width, @border-color);
-				transition: border-top @transition-duration @transition-easing;
+				transition: border-top @transition-top-duration @transition-top-easing;
 
 				.top& {
 					border-top: 0 solid @border-color;
@@ -179,7 +173,7 @@
 				position: absolute;
 				width: 100%;
 				bottom: @eye-position;
-				transition: bottom @transition-duration @transition-easing;
+				transition: bottom @transition-top-duration @transition-top-easing;
 
 				.top& {
 					bottom: 0;
@@ -188,14 +182,14 @@
 				.eye {
 					display: inline-block;
 					.triangle-open-border(@eye-width, @border-width, @skin-color, @eye-color);
-					transition: border-bottom @transition-duration @transition-easing;
+					transition: border-bottom @transition-top-duration @transition-top-easing;
 
 					.top& {
 						border-bottom: 0 solid @eye-color;
 					}
 
 					&:before {
-						transition: border-bottom @transition-duration @transition-easing;
+						transition: border-bottom @transition-top-duration @transition-top-easing;
 
 						.top& {
 							border-bottom: 0 solid @skin-color;
@@ -220,7 +214,7 @@
 			width: 100%;
 			height: @ear-height;
 			bottom: -2px; // fixes some glitches when resizing.
-			transition: height @transition-duration @transition-easing;
+			transition: height @transition-top-duration @transition-top-easing;
 
 			.top& {
 				height: 0;
@@ -229,7 +223,7 @@
 			.ear {
 				display: inline-block;
 				.triangle(@ear-width, @skin-color);
-				transition: border-bottom @transition-duration @transition-easing;
+				transition: border-bottom @transition-top-duration @transition-top-easing;
 
 				.top& {
 					border-bottom: 0 solid @skin-color;
@@ -253,7 +247,7 @@
 			width: 100%;
 			bottom: 0;
 			z-index: 1; // to be on top of shadow.
-			transition: height @transition-duration @transition-easing;
+			transition: height @transition-top-duration @transition-top-easing;
 
 			.top& {
 				height: 0;
@@ -265,7 +259,7 @@
 				display: inline-block;
 				box-sizing: border-box;
 				background-color: @skin-color;
-				transition: border-radius @transition-duration @transition-easing;
+				transition: border-radius @transition-top-duration @transition-top-easing;
 
 				&:first-child {
 					border-bottom-right-radius: @border-radius;
@@ -293,8 +287,8 @@
 			bottom: @handle-position;
 			flex-grow: 1;
 			align-self: flex-end;
-			transition: height @transition-duration @transition-easing;
-			transition: all @transition-duration @transition-easing;
+			transition: height @transition-top-duration @transition-top-easing;
+			transition: all @transition-top-duration @transition-top-easing;
 
 			.handle-out& {
 				position: absolute;
@@ -341,7 +335,7 @@
 				&:first-child {
 					.corner-horizontal-handle {
 						border-top-right-radius: @border-radius;
-						transition: border-top-right-radius @transition-duration @transition-easing;
+						transition: border-top-right-radius @transition-top-duration @transition-top-easing;
 
 						.top& {
 							border-top-right-radius: 0;
@@ -355,7 +349,7 @@
 
 					.corner-horizontal-handle {
 						border-bottom-right-radius: @border-radius;
-						transition: border-bottom-right-radius @transition-duration @transition-easing;
+						transition: border-bottom-right-radius @transition-top-duration @transition-top-easing;
 
 						.top& {
 							border-bottom-right-radius: 0;
