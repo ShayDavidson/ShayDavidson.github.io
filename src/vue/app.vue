@@ -1,6 +1,8 @@
 <template lang="jade">
 	body
 		.container
+			table-pillar(:top='top')
+		.container
 			.content-container
 				table-stand(:top='top')
 		.container
@@ -48,8 +50,12 @@
 		min-height: @content-container-min-height;
 		min-width: @content-container-min-width;
 		position: relative;
-		box-sizing: border-box;
-		margin: 0 @content-container-margin;
+	}
+
+	.table-pillar {
+		width: @content-container-width / 2;
+		height: 100%;
+		transform: translateY(50%);
 	}
 </style>
 
@@ -59,6 +65,7 @@
 	import AppFooter from 'app_footer.vue'
 	import Instafeed from 'instafeed.vue'
 	import TableStand from 'table_stand.vue'
+	import TablePillar from 'table_pillar.vue'
 
 	export default {
 		components: {
@@ -66,6 +73,7 @@
 			CoffeeCat,
 			Instafeed,
 			TableStand,
+			TablePillar,
 			AppFooter
 		},
 

@@ -10146,7 +10146,7 @@
 
 
 	// module
-	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\n@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 1vw;\n}\nbody {\n  background-color: #bcddca;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: absolute;\n}\n.content-container {\n  height: 40vw;\n  width: 40vw;\n  min-height: 40rem;\n  min-width: 40rem;\n  position: relative;\n  box-sizing: border-box;\n  margin: 0 3rem;\n}\n", ""]);
+	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\n@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 1vw;\n}\nbody {\n  background-color: #bcddca;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: absolute;\n}\n.content-container {\n  height: 40vw;\n  width: 40vw;\n  min-height: 40rem;\n  min-width: 40rem;\n  position: relative;\n}\n.table-pillar {\n  width: 20vw;\n  height: 100%;\n  -webkit-transform: translateY(50%);\n          transform: translateY(50%);\n}\n", ""]);
 
 	// exports
 
@@ -10491,12 +10491,17 @@
 
 	var _table_standVue2 = _interopRequireDefault(_table_standVue);
 
+	var _table_pillarVue = __webpack_require__(53);
+
+	var _table_pillarVue2 = _interopRequireDefault(_table_pillarVue);
+
 	exports['default'] = {
 		components: {
 			MainContent: _main_contentVue2['default'],
 			CoffeeCat: _coffee_catVue2['default'],
 			Instafeed: _instafeedVue2['default'],
 			TableStand: _table_standVue2['default'],
+			TablePillar: _table_pillarVue2['default'],
 			AppFooter: _app_footerVue2['default']
 		},
 
@@ -11052,7 +11057,95 @@
 /* 44 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div class=\"container\"><div class=\"content-container\"><table-stand :top=\"top\"></table-stand></div></div><div class=\"container\"><div class=\"content-container\"><coffee-cat :top=\"top\" shadow=\"shadow\"></coffee-cat></div></div><app-footer></app-footer></body>";
+	module.exports = "<body><div class=\"container\"><table-pillar :top=\"top\"></table-pillar></div><div class=\"container\"><div class=\"content-container\"><table-stand :top=\"top\"></table-stand></div></div><div class=\"container\"><div class=\"content-container\"><coffee-cat :top=\"top\" shadow=\"shadow\"></coffee-cat></div></div><app-footer></app-footer></body>";
+
+/***/ },
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(54)
+	module.exports = __webpack_require__(56)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(57)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./table_pillar.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./table_pillar.vue","-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./table_pillar.vue"], function () {
+	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./table_pillar.vue")
+	var newTemplate = require("-!vue-html!template-html?raw&engine=jade!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./table_pillar.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(55);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(11)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-73a273cf&file=table_pillar.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./table_pillar.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-73a273cf&file=table_pillar.vue!./../../node_modules/less-loader/index.js!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./table_pillar.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(10)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n.table-pillar {\n  background-color: #5c5342;\n  -webkit-transition: height 0.3s linear;\n  transition: height 0.3s linear;\n}\n.table-pillar.top {\n  height: 0;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 56 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	exports.__esModule = true;
+	exports['default'] = {
+			props: ['top']
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 57 */
+/***/ function(module, exports) {
+
+	module.exports = "<div :class=\"{ top: top }\" class=\"table-pillar\"></div>";
 
 /***/ }
 /******/ ]);
