@@ -10155,7 +10155,7 @@
 
 
 	// module
-	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\n@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 5px;\n  overflow: hidden;\n}\nbody {\n  background-color: #bcddca;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: absolute;\n}\n.content-container {\n  height: 250.5px;\n  width: 250.5px;\n  position: relative;\n}\n.table-stand {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n}\n.coffee-cat {\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg);\n}\n.table-pillar {\n  width: 125.25px;\n  height: 50%;\n  -webkit-transform: translateY(50%);\n          transform: translateY(50%);\n}\n", ""]);
+	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\n@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\nhtml,\nbody {\n  width: 100%;\n  height: 100%;\n  font-size: 5px;\n  overflow: hidden;\n}\nbody {\n  background-color: #bcddca;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: absolute;\n}\n.content-container {\n  height: 250.5px;\n  width: 250.5px;\n  position: relative;\n}\n.table-stand.rotated {\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  transition: -webkit-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n.table-stand.rotated.rotated {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n}\n.coffee-cat {\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  transition: -webkit-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n.coffee-cat.rotated {\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg);\n}\n.table-pillar {\n  width: 125.25px;\n  height: 50%;\n  -webkit-transform: translateY(50%);\n          transform: translateY(50%);\n}\n", ""]);
 
 	// exports
 
@@ -10511,16 +10511,24 @@
 
 		data: function data() {
 			return {
-				top: true
+				top: true,
+				rotated: true
 			};
 		},
 
-		created: function created() {
-			var _this = this;
+		methods: {
+			toggle: function toggle() {
+				this.top = !this.top;
+			},
 
-			window.toggle = function () {
-				_this.top = !_this.top;
-			};
+			fixRotation: function fixRotation() {
+				this.rotated = !this.rotated;
+			}
+		},
+
+		created: function created() {
+			setTimeout(this.fixRotation, 500);
+			setTimeout(this.toggle, 1200);
 		}
 	};
 	module.exports = exports['default'];
@@ -11070,7 +11078,7 @@
 /* 58 */
 /***/ function(module, exports) {
 
-	module.exports = "<body><div class=\"container\"><table-pillar :top=\"top\"></table-pillar></div><div class=\"container\"><div class=\"content-container\"><table-stand :top=\"top\"></table-stand></div></div><div class=\"container\"><div class=\"content-container\"><coffee-cat :top=\"top\" shadow=\"shadow\"></coffee-cat></div></div><app-footer :top=\"top\"></app-footer></body>";
+	module.exports = "<body><div class=\"container\"><table-pillar :top=\"top\"></table-pillar></div><div class=\"container\"><div class=\"content-container\"><table-stand :top=\"top\" :class=\"{ rotated: rotated }\"></table-stand></div></div><div class=\"container\"><div class=\"content-container\"><coffee-cat :top=\"top\" :class=\"{ rotated: rotated }\" shadow=\"shadow\"></coffee-cat></div></div><app-footer :top=\"top\"></app-footer></body>";
 
 /***/ }
 /******/ ]);

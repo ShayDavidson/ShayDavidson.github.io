@@ -4,12 +4,12 @@
 			table-pillar(:top='top')
 		.container
 			.content-container
-				table-stand(:top='top')
+				table-stand(:top='top', :class='{ rotated: rotated }')
 		.container
 			//- .content-container
 			//- 	main-content
 			.content-container
-				coffee-cat(:top='top', shadow=true, handle-in=false)
+				coffee-cat(:top='top', :class='{ rotated: rotated }', shadow=true, handle-in=false)
 		app-footer(:top='top')
 
 </template>
@@ -49,12 +49,20 @@
 		position: relative;
 	}
 
-	.table-stand {
-		transform: rotate(45deg);
+	.table-stand.rotated {
+		transition: transform @transition-top-duration @transition-top-easing;
+
+		&.rotated {
+			transform: rotate(45deg);
+		}
 	}
 
 	.coffee-cat {
-		transform: rotate(90deg);
+		transition: transform @transition-top-duration @transition-top-easing;
+
+		&.rotated {
+			transform: rotate(90deg);
+		}
 	}
 
 	.table-pillar {
@@ -82,14 +90,24 @@
 
 		data() {
 			return {
-				top: true
+				top: true,
+				rotated: true
+			}
+		},
+
+		methods: {
+			toggle() {
+				this.top = !this.top
+			},
+
+			fixRotation() {
+				this.rotated = !this.rotated
 			}
 		},
 
 		created() {
-			window.toggle = () => {
-				this.top = !this.top
-			}
+			setTimeout(this.fixRotation, 500)
+			setTimeout(this.toggle, 1200)
 		}
 	}
 </script>
