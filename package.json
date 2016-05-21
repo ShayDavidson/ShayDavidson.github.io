@@ -13,6 +13,7 @@
     "url": "https://github.com/ShayDavidson/ShayDavidson.github.io/issues"
   },
   "scripts": {
+		"start": "open index.html",
     "lint": "eslint ./src/**/*.vue ./src/**/*.es6",
     "build": "webpack",
     "watch": "webpack --watch",

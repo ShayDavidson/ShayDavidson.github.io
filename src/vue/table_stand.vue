@@ -7,8 +7,8 @@
 	@import '~colors.less';
 	@import '~animations.less';
 
-	@table-padding: 5rem;
-	@table-front-height: 5rem;
+	@table-padding: 8%;
+	@table-front-height: 10%;
 
 	.table-stand {
 		background-color: @color-wood;
@@ -17,7 +17,7 @@
 		width: 100%;
 		padding: @table-padding;
 		padding-bottom: 2 * @table-padding;
-		bottom: -@table-padding * 2;
+		bottom: -@table-padding * 1.5;
 		left: -@table-padding;
 		transition: all @transition-top-duration @transition-top-easing;
 

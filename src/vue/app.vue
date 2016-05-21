@@ -10,7 +10,7 @@
 			//- 	main-content
 			.content-container
 				coffee-cat(:top='top', shadow=true, handle-in=false)
-		app-footer
+		app-footer(:top='top')
 
 </template>
 
@@ -19,16 +19,15 @@
 	@import '~colors.less';
 	@import '~animations.less';
 
-	@content-container-height: 40vw;
-	@content-container-width: 40vw;
-	@content-container-min-height: 40rem;
-	@content-container-min-width: 40rem;
-	@content-container-margin: 3rem;
+	// gave up fully fluidic-layout due to the cat looking weird on some layouts :)
+	@content-container-height: 250.5px;
+	@content-container-width: 250.5px; // sub pixels help solve some weird artifacts on Chrome
 
 	html, body {
 		width: 100%;
 		height: 100%;
-		font-size: 1vw;
+		font-size: 5px;
+		overflow: hidden;
 	}
 
 	body {
@@ -47,14 +46,20 @@
 	.content-container {
 		height: @content-container-height;
 		width: @content-container-width;
-		min-height: @content-container-min-height;
-		min-width: @content-container-min-width;
 		position: relative;
+	}
+
+	.table-stand {
+		transform: rotate(45deg);
+	}
+
+	.coffee-cat {
+		transform: rotate(90deg);
 	}
 
 	.table-pillar {
 		width: @content-container-width / 2;
-		height: 100%;
+		height: 50%;
 		transform: translateY(50%);
 	}
 </style>
@@ -63,7 +68,6 @@
 	import MainContent from 'main_content.vue'
 	import CoffeeCat from 'coffee_cat.vue'
 	import AppFooter from 'app_footer.vue'
-	import Instafeed from 'instafeed.vue'
 	import TableStand from 'table_stand.vue'
 	import TablePillar from 'table_pillar.vue'
 
@@ -71,7 +75,6 @@
 		components: {
 			MainContent,
 			CoffeeCat,
-			Instafeed,
 			TableStand,
 			TablePillar,
 			AppFooter
