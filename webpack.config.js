@@ -1,5 +1,4 @@
 var webpack = require('webpack')
-var path = require('path')
 
 module.exports = {
 	entry: './src/es6/index.es6',
@@ -10,7 +9,6 @@ module.exports = {
 	module: {
 		loaders: [
 			{ loader: 'vue', test: /\.vue$/ },
-			{ loader: 'json', test: /\.json$/ },
 			{ loader: 'babel', test: /\.es6$/ }
 		]
 	},
