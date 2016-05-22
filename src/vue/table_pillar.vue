@@ -1,19 +1,15 @@
 <template lang='jade'>
-	.table-pillar(:class='{ top: top }')
+	.table-pillar
 </template>
 
 <style lang='less'>
-	@import '~colors.less';
-	@import '~animations.less';
+	@import (reference) '~variables.less';
 
 	.table-pillar {
 		background-color: @color-wood-darker;
 		transition: height @transition-top-duration @transition-top-easing;
-
-		&.top {
-			height: 0;
-		}
-
+		z-index: -2;
+		position: relative;
 	}
 </style>
 

@@ -1,16 +1,12 @@
 <template lang='jade'>
-	footer(:class='{ top: top }')
-		span Developed by
-		br
+	footer
 		span Shay Davidson
 		br
 		span &copy; {{year}}
 </template>
 
 <style lang='less'>
-	@import '~fonts.less';
-	@import '~colors.less';
-	@import '~animations.less';
+	@import (reference) '~variables.less';
 
 	footer {
 		position: absolute;
@@ -23,10 +19,6 @@
 		padding: 1em;
 		box-sizing: border-box;
 		transition: all @transition-top-duration @transition-top-easing;
-
-		&.top {
-			bottom: -50px;
-		}
 	}
 </style>
 

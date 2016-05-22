@@ -1,5 +1,5 @@
 <template lang='jade'>
-	.coffee-cat(:class="{ 'handle-in': handleIn, 'handle-out': !handleIn, top: top }")
+	.coffee-cat(:class="{ 'handle-in': handleIn, 'handle-out': !handleIn }")
 		.main
 			.shadow(v-if='shadow')
 			.head
@@ -26,9 +26,8 @@
 </template>
 
 <style lang='less'>
-	@import '~triangles.less';
-	@import '~colors.less';
-	@import '~animations.less';
+	@import (reference) '~triangles.less';
+	@import (reference) '~variables.less';
 
 	.coffee-cat {
 		@border-color: @color-orange;
@@ -79,7 +78,7 @@
 			padding: 0 @shadow-extension / 2;
 			transition: all @transition-top-duration @transition-top-easing;
 
-			.top& {
+			.top & {
 				height: 100%;
 				padding: @shadow-extension / 2;
 			}
@@ -106,7 +105,7 @@
 			width: 100%;
 			transition: height @transition-top-duration @transition-top-easing;
 
-			.top& {
+			.top & {
 				height: 100%;
 			}
 
@@ -118,7 +117,7 @@
 				position: relative;
 				transition: height @transition-top-duration @transition-top-easing;
 
-				.top& {
+				.top & {
 					height: 100%;
 				}
 
@@ -130,7 +129,7 @@
 					position: absolute;
 					transition: height @transition-top-duration @transition-top-easing;
 
-					.top& {
+					.top & {
 						height: 0;
 					}
 				}
@@ -145,7 +144,7 @@
 					transition: opacity @transition-top-duration * 2 @transition-top-easing;
 					transition-delay: 0.2s;
 
-					.top& {
+					.top & {
 						opacity: 0;
 						transition-delay: 0s;
 						transition-duration: @transition-top-duration / 2;
@@ -161,7 +160,7 @@
 				.triangle-flipped(@nose-width, @border-color);
 				transition: border-top @transition-top-duration @transition-top-easing;
 
-				.top& {
+				.top & {
 					border-top: 0 solid @border-color;
 				}
 			}
@@ -175,7 +174,7 @@
 				bottom: @eye-position;
 				transition: bottom @transition-top-duration @transition-top-easing;
 
-				.top& {
+				.top & {
 					bottom: 0;
 				}
 
@@ -184,14 +183,14 @@
 					.triangle-open-border(@eye-width, @border-width, @skin-color, @eye-color);
 					transition: border-bottom @transition-top-duration @transition-top-easing;
 
-					.top& {
+					.top & {
 						border-bottom: 0 solid @eye-color;
 					}
 
 					&:before {
 						transition: border-bottom @transition-top-duration @transition-top-easing;
 
-						.top& {
+						.top & {
 							border-bottom: 0 solid @skin-color;
 						}
 					}
@@ -216,7 +215,7 @@
 			bottom: -2px; // fixes some glitches when resizing.
 			transition: height @transition-top-duration @transition-top-easing;
 
-			.top& {
+			.top & {
 				height: 0;
 			}
 
@@ -225,7 +224,7 @@
 				.triangle(@ear-width, @skin-color);
 				transition: border-bottom @transition-top-duration @transition-top-easing;
 
-				.top& {
+				.top & {
 					border-bottom: 0 solid @skin-color;
 				}
 
@@ -249,7 +248,7 @@
 			z-index: 1; // to be on top of shadow.
 			transition: height @transition-top-duration @transition-top-easing;
 
-			.top& {
+			.top & {
 				height: 0;
 			}
 
@@ -264,7 +263,7 @@
 				&:first-child {
 					border-bottom-right-radius: @border-radius;
 
-					.top& {
+					.top & {
 						border-bottom-right-radius: 0;
 					}
 				}
@@ -272,7 +271,7 @@
 				&:last-child {
 					border-bottom-left-radius: @border-radius;
 
-					.top& {
+					.top & {
 						border-bottom-left-radius: 0;
 					}
 				}
@@ -295,7 +294,7 @@
 				width: 100% - @handle-in-main-width;
 			}
 
-			.top& {
+			.top & {
 				height: @handle-part-width;
 				bottom: 50%;
 				transform: translateY(50%);
@@ -337,7 +336,7 @@
 						border-top-right-radius: @border-radius;
 						transition: border-top-right-radius @transition-top-duration @transition-top-easing;
 
-						.top& {
+						.top & {
 							border-top-right-radius: 0;
 						}
 					}
@@ -351,7 +350,7 @@
 						border-bottom-right-radius: @border-radius;
 						transition: border-bottom-right-radius @transition-top-duration @transition-top-easing;
 
-						.top& {
+						.top & {
 							border-bottom-right-radius: 0;
 						}
 

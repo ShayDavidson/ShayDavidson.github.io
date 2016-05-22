@@ -1,0 +1,23 @@
+@import (reference) '~variables';
+
+.app.top {
+	@footer-hidden-margin: 50px;
+
+	footer {
+		bottom: -@footer-hidden-margin;
+	}
+
+	.table-pillar {
+		height: 0;
+	}
+
+	.table-stand {
+		height: 100%;
+		padding-bottom: @table-padding;
+		bottom: -@table-padding;
+
+		.table-front {
+			bottom: 0;
+		}
+	}
+}

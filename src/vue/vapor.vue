@@ -4,8 +4,7 @@
 </template>
 
 <style lang='less'>
-	@import '~colors.less';
-	@import '~animations.less';
+	@import (reference) '~variables.less';
 
 	.vapor {
 		.vapor-rectangle {

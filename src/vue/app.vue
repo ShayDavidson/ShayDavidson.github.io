@@ -1,33 +1,37 @@
 <template lang="jade">
-	body
+	.app(:class='{ top: top }')
 		.container
-			table-pillar(:top='top')
+			table-pillar
 		.container
 			.content-container
-				table-stand(:top='top', :class='{ rotated: rotated }')
+				table-stand(:class='{ rotated: rotated }')
 		.container
 			//- .content-container
 			//- 	main-content
 			.content-container
-				coffee-cat(:top='top', :class='{ rotated: rotated }', shadow=true, handle-in=false)
-		app-footer(:top='top')
+				coffee-cat(:class='{ rotated: rotated }', shadow=true, handle-in=false)
+		app-footer
 
 </template>
 
 <style lang="less">
-	@import "~reset.less";
-	@import '~colors.less';
+	@import '~reset.less';
 	@import '~animations.less';
+	@import '~top.less';
+	@import (reference) '~variables.less';
 
 	// gave up fully fluidic-layout due to the cat looking weird on some layouts :)
 	@content-container-height: 250.5px;
 	@content-container-width: 250.5px; // sub pixels help solve some weird artifacts on Chrome
 
-	html, body {
+	html, body, .app {
 		width: 100%;
 		height: 100%;
-		font-size: 5px;
 		overflow: hidden;
+	}
+
+	html {
+		font-size: 5px;
 	}
 
 	body {
@@ -91,7 +95,7 @@
 		data() {
 			return {
 				top: true,
-				rotated: true
+				rotated: false
 			}
 		},
 
@@ -106,7 +110,7 @@
 		},
 
 		created() {
-			setTimeout(this.fixRotation, 500)
+			// setTimeout(this.fixRotation, 500)
 			setTimeout(this.toggle, 1200)
 		}
 	}

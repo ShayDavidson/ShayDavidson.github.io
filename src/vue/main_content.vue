@@ -6,8 +6,7 @@
 </template>
 
 <style lang='less'>
-	@import '~fonts.less';
-	@import '~colors.less';
+	@import (reference) '~variables.less';
 
 	.main-content {
 		color: @color-brown;

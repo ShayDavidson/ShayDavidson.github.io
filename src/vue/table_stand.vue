@@ -1,14 +1,12 @@
 <template lang='jade'>
-	.table-stand(:class='{ top: top }')
+	.table-stand
 		.table-front
 </template>
 
 <style lang='less'>
-	@import '~colors.less';
-	@import '~animations.less';
+	@import (reference) '~variables.less';
 
-	@table-padding: 8%;
-	@table-front-height: 10%;
+	@table-front-height: 10px;
 
 	.table-stand {
 		background-color: @color-wood;
@@ -21,24 +19,15 @@
 		left: -@table-padding;
 		transition: all @transition-top-duration @transition-top-easing;
 
-		&.top {
-			height: 100%;
-			padding-bottom: @table-padding;
-			bottom: -@table-padding;
-		}
-
 		.table-front {
 			width: 100%;
 			height: @table-front-height;
 			background-color: @color-wood-dark;
-			transition: height @transition-top-duration @transition-top-easing;
+			transition: bottom @transition-top-duration @transition-top-easing;
 			left: 0;
-			bottom: 0;
+			bottom: -@table-front-height;
 			position: absolute;
-
-			.top& {
-				height: 0;
-			}
+			z-index: -1;
 		}
 	}
 </style>
