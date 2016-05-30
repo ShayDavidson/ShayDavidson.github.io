@@ -11148,7 +11148,7 @@
 
 
 	// module
-	exports.push([module.id, ".table-pillar {\n  background-color: #544c3c;\n  -webkit-transition: height 0.3s ease-out;\n  transition: height 0.3s ease-out;\n  z-index: -2;\n  position: relative;\n}\n.top .table-pillar {\n  height: 0;\n}\n", ""]);
+	exports.push([module.id, ".table-pillar {\n  background-color: #5c5342;\n  -webkit-transition: height 0.3s ease-out;\n  transition: height 0.3s ease-out;\n  z-index: -2;\n  position: relative;\n}\n.table-pillar:after {\n  background-color: #544c3c;\n  content: '';\n  position: absolute;\n  width: 100%;\n  height: 50%;\n}\n.top .table-pillar {\n  height: 0;\n}\n", ""]);
 
 	// exports
 

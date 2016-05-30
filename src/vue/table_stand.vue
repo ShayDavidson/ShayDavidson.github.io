@@ -6,8 +6,6 @@
 <style lang='less'>
 	@import (reference) '~variables.less';
 
-	@table-front-height: 10px;
-	@table-padding: 8%;
 	@table-front-height: 20px;
 
 	.table-stand {
