@@ -17,7 +17,6 @@
 <style lang="less">
 	@import '~reset.less';
 	@import '~animations.less';
-	@import '~top.less';
 	@import (reference) '~variables.less';
 
 	// gave up fully fluidic-layout due to the cat looking weird on some layouts :)

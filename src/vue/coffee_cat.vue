@@ -368,7 +368,7 @@
 	import Vapor from 'vapor.vue'
 
 	export default {
-		props: ['shadow', 'handleIn', 'top'],
+		props: ['shadow', 'handleIn'],
 		components: {
 			Vapor
 		}

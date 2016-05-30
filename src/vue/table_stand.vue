@@ -7,6 +7,8 @@
 	@import (reference) '~variables.less';
 
 	@table-front-height: 10px;
+	@table-padding: 8%;
+	@table-front-height: 20px;
 
 	.table-stand {
 		background-color: @color-wood;
@@ -19,6 +21,12 @@
 		left: -@table-padding;
 		transition: all @transition-top-duration @transition-top-easing;
 
+		.top & {
+			height: 100%;
+			padding-bottom: @table-padding;
+			bottom: -@table-padding;
+		}
+
 		.table-front {
 			width: 100%;
 			height: @table-front-height;
@@ -28,12 +36,15 @@
 			bottom: -@table-front-height;
 			position: absolute;
 			z-index: -1;
+
+			.top & {
+				bottom: 0;
+			}
 		}
 	}
 </style>
 
 <script>
 	export default {
-		props: ['top']
 	}
 </script>

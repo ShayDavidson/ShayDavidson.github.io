@@ -8,6 +8,8 @@
 <style lang='less'>
 	@import (reference) '~variables.less';
 
+	@footer-hidden-margin: 50px;
+
 	footer {
 		position: absolute;
 		bottom: 0;
@@ -19,13 +21,15 @@
 		padding: 1em;
 		box-sizing: border-box;
 		transition: all @transition-top-duration @transition-top-easing;
+
+		.top & {
+			bottom: -@footer-hidden-margin;
+		}
 	}
 </style>
 
 <script>
 	export default {
-		props: ['top'],
-
 		computed: {
 			year() {
 				return new Date().getFullYear()

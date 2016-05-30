@@ -10,11 +10,14 @@
 		transition: height @transition-top-duration @transition-top-easing;
 		z-index: -2;
 		position: relative;
+
+		.top & {
+			height: 0;
+		}
 	}
 </style>
 
 <script>
 	export default {
-		props: ['top']
 	}
 </script>

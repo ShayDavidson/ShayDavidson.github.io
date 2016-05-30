@@ -44,8 +44,8 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	let Vue = __webpack_require__(6);
-	let App = __webpack_require__(8);
+	let Vue = __webpack_require__(5);
+	let App = __webpack_require__(7);
 
 	Vue.config.debug = true;
 	Vue.config.devtools = false;
@@ -62,8 +62,7 @@
 /* 2 */,
 /* 3 */,
 /* 4 */,
-/* 5 */,
-/* 6 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -10096,10 +10095,10 @@
 	}, 0);
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(6)))
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -10199,17 +10198,17 @@
 
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(9)
-	__vue_script__ = __webpack_require__(13)
+	__webpack_require__(8)
+	__vue_script__ = __webpack_require__(12)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(44)
+	__vue_template__ = __webpack_require__(43)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10228,16 +10227,16 @@
 	})()}
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(10);
+	var content = __webpack_require__(9);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10254,21 +10253,21 @@
 	}
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(11)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\n@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n.app.top footer {\n  bottom: -50px;\n}\n.app.top .table-pillar {\n  height: 0;\n}\n.app.top .table-stand {\n  height: 100%;\n  padding-bottom: 8%;\n  bottom: -8%;\n}\n.app.top .table-stand .table-front {\n  bottom: 0;\n}\nhtml,\nbody,\n.app {\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n}\nhtml {\n  font-size: 5px;\n}\nbody {\n  background-color: #bcddca;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: absolute;\n}\n.content-container {\n  height: 250.5px;\n  width: 250.5px;\n  position: relative;\n}\n.table-stand.rotated {\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  transition: -webkit-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n.table-stand.rotated.rotated {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n}\n.coffee-cat {\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  transition: -webkit-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n.coffee-cat.rotated {\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg);\n}\n.table-pillar {\n  width: 125.25px;\n  height: 50%;\n  -webkit-transform: translateY(50%);\n          transform: translateY(50%);\n}\n", ""]);
+	exports.push([module.id, "body,\nhtml {\n  box-sizing: border-box;\n  height: 100%;\n  margin: 0px;\n  padding: 0px;\n  width: 100%;\n}\n@-webkit-keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\n@keyframes wobble {\n  0% {\n    left: 1.05183873rem;\n  }\n  50% {\n    left: -1.05183873rem;\n  }\n  100% {\n    left: 1.05183873rem;\n  }\n}\nhtml,\nbody,\n.app {\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n}\nhtml {\n  font-size: 5px;\n}\nbody {\n  background-color: #bcddca;\n}\n.container {\n  width: 100%;\n  height: 100%;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  position: absolute;\n}\n.content-container {\n  height: 250.5px;\n  width: 250.5px;\n  position: relative;\n}\n.table-stand.rotated {\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  transition: -webkit-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n.table-stand.rotated.rotated {\n  -webkit-transform: rotate(45deg);\n          transform: rotate(45deg);\n}\n.coffee-cat {\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  transition: -webkit-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;\n}\n.coffee-cat.rotated {\n  -webkit-transform: rotate(90deg);\n          transform: rotate(90deg);\n}\n.table-pillar {\n  width: 125.25px;\n  height: 50%;\n  -webkit-transform: translateY(50%);\n          transform: translateY(50%);\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports) {
 
 	/*
@@ -10324,7 +10323,7 @@
 
 
 /***/ },
-/* 12 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10546,7 +10545,7 @@
 
 
 /***/ },
-/* 13 */
+/* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10555,23 +10554,23 @@
 		value: true
 	});
 
-	var _main_content = __webpack_require__(14);
+	var _main_content = __webpack_require__(13);
 
 	var _main_content2 = _interopRequireDefault(_main_content);
 
-	var _coffee_cat = __webpack_require__(19);
+	var _coffee_cat = __webpack_require__(18);
 
 	var _coffee_cat2 = _interopRequireDefault(_coffee_cat);
 
-	var _app_footer = __webpack_require__(29);
+	var _app_footer = __webpack_require__(28);
 
 	var _app_footer2 = _interopRequireDefault(_app_footer);
 
-	var _table_stand = __webpack_require__(34);
+	var _table_stand = __webpack_require__(33);
 
 	var _table_stand2 = _interopRequireDefault(_table_stand);
 
-	var _table_pillar = __webpack_require__(39);
+	var _table_pillar = __webpack_require__(38);
 
 	var _table_pillar2 = _interopRequireDefault(_table_pillar);
 
@@ -10609,17 +10608,17 @@
 	};
 
 /***/ },
-/* 14 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(15)
-	__vue_script__ = __webpack_require__(17)
+	__webpack_require__(14)
+	__vue_script__ = __webpack_require__(16)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/vue/main_content.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(18)
+	__vue_template__ = __webpack_require__(17)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10638,16 +10637,16 @@
 	})()}
 
 /***/ },
-/* 15 */
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(16);
+	var content = __webpack_require__(15);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10664,10 +10663,10 @@
 	}
 
 /***/ },
-/* 16 */
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(11)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
@@ -10678,7 +10677,7 @@
 
 
 /***/ },
-/* 17 */
+/* 16 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10689,23 +10688,23 @@
 	exports.default = {};
 
 /***/ },
-/* 18 */
+/* 17 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"main-content\"><h1>Hey, I'm Shay</h1><p>A web, mobile and game developer, a father to one daughter and two cats, a coffee lover and a synthwave fan.</p><p>Currently leading the web team at the PayPal Consumer Product Center in Tel-Aviv.</p></div>";
 
 /***/ },
-/* 19 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(20)
-	__vue_script__ = __webpack_require__(22)
+	__webpack_require__(19)
+	__vue_script__ = __webpack_require__(21)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/vue/coffee_cat.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(28)
+	__vue_template__ = __webpack_require__(27)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10724,16 +10723,16 @@
 	})()}
 
 /***/ },
-/* 20 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(21);
+	var content = __webpack_require__(20);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10750,10 +10749,10 @@
 	}
 
 /***/ },
-/* 21 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(11)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
@@ -10764,7 +10763,7 @@
 
 
 /***/ },
-/* 22 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10773,31 +10772,31 @@
 		value: true
 	});
 
-	var _vapor = __webpack_require__(23);
+	var _vapor = __webpack_require__(22);
 
 	var _vapor2 = _interopRequireDefault(_vapor);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
-		props: ['shadow', 'handleIn', 'top'],
+		props: ['shadow', 'handleIn'],
 		components: {
 			Vapor: _vapor2.default
 		}
 	};
 
 /***/ },
-/* 23 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(24)
-	__vue_script__ = __webpack_require__(26)
+	__webpack_require__(23)
+	__vue_script__ = __webpack_require__(25)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/vue/vapor.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(27)
+	__vue_template__ = __webpack_require__(26)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10816,16 +10815,16 @@
 	})()}
 
 /***/ },
-/* 24 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(25);
+	var content = __webpack_require__(24);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10842,10 +10841,10 @@
 	}
 
 /***/ },
-/* 25 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(11)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
@@ -10856,7 +10855,7 @@
 
 
 /***/ },
-/* 26 */
+/* 25 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10896,29 +10895,29 @@
 	};
 
 /***/ },
-/* 27 */
+/* 26 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-bind:style=\"{ height: height }\" class=\"vapor\"><div v-for=\"segmentStyle in segments\" v-bind:style=\"segmentStyle\" class=\"vapor-rectangle\"></div></div>";
 
 /***/ },
-/* 28 */
+/* 27 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"{ 'handle-in': handleIn, 'handle-out': !handleIn }\" class=\"coffee-cat\"><div class=\"main\"><div v-if=\"shadow\" class=\"shadow\"></div><div class=\"head\"><div class=\"opening\"><vapor height=\"20vh\"></vapor><div class=\"ears\"><div class=\"ear\"></div><div class=\"ear\"></div></div></div><div class=\"eyes\"><div class=\"eye\"></div><div class=\"eye\"></div></div><div class=\"nose\"></div></div><div class=\"cheeks\"><div class=\"cheek\"></div><div class=\"cheek\"></div></div></div><div class=\"handle\"><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div><div class=\"vertical-handle\"></div><div class=\"horizontal-handle\"><div class=\"flat-horizontal-handle\"></div><div class=\"corner-horizontal-handle\"></div></div></div></div>";
 
 /***/ },
-/* 29 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(30)
-	__vue_script__ = __webpack_require__(32)
+	__webpack_require__(29)
+	__vue_script__ = __webpack_require__(31)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/vue/app_footer.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(33)
+	__vue_template__ = __webpack_require__(32)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10937,16 +10936,16 @@
 	})()}
 
 /***/ },
-/* 30 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(31);
+	var content = __webpack_require__(30);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10963,31 +10962,29 @@
 	}
 
 /***/ },
-/* 31 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(11)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "footer {\n  position: absolute;\n  bottom: 0;\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\n  font-size: 11px;\n  color: #f6f4d2;\n  text-align: center;\n  width: 100%;\n  padding: 1em;\n  box-sizing: border-box;\n  -webkit-transition: all 0.3s ease-out;\n  transition: all 0.3s ease-out;\n}\n", ""]);
+	exports.push([module.id, "footer {\n  position: absolute;\n  bottom: 0;\n  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;\n  font-size: 11px;\n  color: #f6f4d2;\n  text-align: center;\n  width: 100%;\n  padding: 1em;\n  box-sizing: border-box;\n  -webkit-transition: all 0.3s ease-out;\n  transition: all 0.3s ease-out;\n}\n.top footer {\n  bottom: -50px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 32 */
+/* 31 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 	exports.default = {
-		props: ['top'],
-
 		computed: {
 			year: function year() {
 				return new Date().getFullYear();
@@ -10996,23 +10993,23 @@
 	};
 
 /***/ },
-/* 33 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "<footer><span>Shay Davidson</span><br/><span>&copy; {{year}}</span></footer>";
 
 /***/ },
-/* 34 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(35)
-	__vue_script__ = __webpack_require__(37)
+	__webpack_require__(34)
+	__vue_script__ = __webpack_require__(36)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/vue/table_stand.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(38)
+	__vue_template__ = __webpack_require__(37)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -11031,16 +11028,16 @@
 	})()}
 
 /***/ },
-/* 35 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(36);
+	var content = __webpack_require__(35);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11057,50 +11054,48 @@
 	}
 
 /***/ },
-/* 36 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(11)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".table-stand {\n  background-color: #9b8c73;\n  height: 0;\n  position: absolute;\n  width: 100%;\n  padding: 8%;\n  padding-bottom: 16%;\n  bottom: -12%;\n  left: -8%;\n  -webkit-transition: all 0.3s ease-out;\n  transition: all 0.3s ease-out;\n}\n.table-stand .table-front {\n  width: 100%;\n  height: 10px;\n  background-color: #7a6d57;\n  -webkit-transition: bottom 0.3s ease-out;\n  transition: bottom 0.3s ease-out;\n  left: 0;\n  bottom: -10px;\n  position: absolute;\n  z-index: -1;\n}\n", ""]);
+	exports.push([module.id, ".table-stand {\n  background-color: #9b8c73;\n  height: 0;\n  position: absolute;\n  width: 100%;\n  padding: 8%;\n  padding-bottom: 16%;\n  bottom: -12%;\n  left: -8%;\n  -webkit-transition: all 0.3s ease-out;\n  transition: all 0.3s ease-out;\n}\n.top .table-stand {\n  height: 100%;\n  padding-bottom: 8%;\n  bottom: -8%;\n}\n.table-stand .table-front {\n  width: 100%;\n  height: 20px;\n  background-color: #7a6d57;\n  -webkit-transition: bottom 0.3s ease-out;\n  transition: bottom 0.3s ease-out;\n  left: 0;\n  bottom: -20px;\n  position: absolute;\n  z-index: -1;\n}\n.top .table-stand .table-front {\n  bottom: 0;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 37 */
+/* 36 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
-	exports.default = {
-		props: ['top']
-	};
+	exports.default = {};
 
 /***/ },
-/* 38 */
+/* 37 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"table-stand\"><div class=\"table-front\"></div></div>";
 
 /***/ },
-/* 39 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(40)
-	__vue_script__ = __webpack_require__(42)
+	__webpack_require__(39)
+	__vue_script__ = __webpack_require__(41)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/vue/table_pillar.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(43)
+	__vue_template__ = __webpack_require__(42)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -11119,16 +11114,16 @@
 	})()}
 
 /***/ },
-/* 40 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(41);
+	var content = __webpack_require__(40);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(12)(content, {});
+	var update = __webpack_require__(11)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11145,40 +11140,38 @@
 	}
 
 /***/ },
-/* 41 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(11)();
+	exports = module.exports = __webpack_require__(10)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".table-pillar {\n  background-color: #5c5342;\n  -webkit-transition: height 0.3s ease-out;\n  transition: height 0.3s ease-out;\n  z-index: -2;\n  position: relative;\n}\n", ""]);
+	exports.push([module.id, ".table-pillar {\n  background-color: #544c3c;\n  -webkit-transition: height 0.3s ease-out;\n  transition: height 0.3s ease-out;\n  z-index: -2;\n  position: relative;\n}\n.top .table-pillar {\n  height: 0;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 42 */
+/* 41 */
 /***/ function(module, exports) {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-		value: true
+	  value: true
 	});
-	exports.default = {
-		props: ['top']
-	};
+	exports.default = {};
 
 /***/ },
-/* 43 */
+/* 42 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"table-pillar\"></div>";
 
 /***/ },
-/* 44 */
+/* 43 */
 /***/ function(module, exports) {
 
 	module.exports = "<div :class=\"{ top: top }\" class=\"app\"><div class=\"container\"><table-pillar></table-pillar></div><div class=\"container\"><div class=\"content-container\"><table-stand :class=\"{ rotated: rotated }\"></table-stand></div></div><div class=\"container\"><div class=\"content-container\"><coffee-cat :class=\"{ rotated: rotated }\" shadow=\"shadow\"></coffee-cat></div></div><app-footer></app-footer></div>";
